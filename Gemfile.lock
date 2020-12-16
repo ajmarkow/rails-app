@@ -37,6 +37,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_export (0.4.0)
+      activesupport (>= 3.0.0)
     activejob (6.0.3.4)
       activesupport (= 6.0.3.4)
       globalid (>= 0.3.6)
@@ -186,6 +188,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    shoulda-matchers (4.4.1)
+      activesupport (>= 4.2.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -223,6 +227,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  active_export
   bootsnap (>= 1.4.2)
   byebug
   devise
@@ -236,6 +241,7 @@ DEPENDENCIES
   react-rails
   rspec-rails
   sass-rails (>= 6)
+  shoulda-matchers
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

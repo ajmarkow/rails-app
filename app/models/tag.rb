@@ -1,3 +1,3 @@
 class Tag < ApplicationRecord
-  belongs_to :taggable, polymorphic: true
+  belongs_to :taggable, polymorphic: true, optional: true
 end
