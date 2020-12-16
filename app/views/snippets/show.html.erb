@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trigger:</strong>
+  <%= @snippet.trigger %>
+</p>
+
+<p>
+  <strong>Replacement:</strong>
+  <%= @snippet.replacement %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @snippet.type %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @snippet.is_public %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @snippet.tags %>
+</p>
+
+<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+<%= link_to 'Back', snippets_path %>

@@ -1,0 +1,27 @@
+<%= form_with(model: snippets_list, local: true) do |form| %>
+  <% if snippets_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippets_list.errors.count, "error") %> prohibited this snippets_list from being saved:</h2>
+
+      <ul>
+        <% snippets_list.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_public %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags %>
+    <%= form.text_area :tags %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

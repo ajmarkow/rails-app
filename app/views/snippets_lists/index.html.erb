@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Snippets Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Is public</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @snippets_lists.each do |snippets_list| %>
+      <tr>
+        <td><%= snippets_list.is_public %></td>
+        <td><%= snippets_list.tags %></td>
+        <td><%= link_to 'Show', snippets_list %></td>
+        <td><%= link_to 'Edit', edit_snippets_list_path(snippets_list) %></td>
+        <td><%= link_to 'Destroy', snippets_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Snippets List', new_snippets_list_path %>

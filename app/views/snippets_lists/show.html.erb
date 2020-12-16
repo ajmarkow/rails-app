@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @snippets_list.is_public %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @snippets_list.tags %>
+</p>
+
+<%= link_to 'Edit', edit_snippets_list_path(@snippets_list) %> |
+<%= link_to 'Back', snippets_lists_path %>
