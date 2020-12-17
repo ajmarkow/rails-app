@@ -2286,3 +2286,44 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.0ms | Allocations: 6413)
 
 
+Started GET "/" for ::1 at 2020-12-16 17:12:24 -0800
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 132.2ms | ActiveRecord: 0.0ms | Allocations: 11266)
+
+
+Started GET "/" for ::1 at 2020-12-16 17:14:07 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 278)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 112ms (Views: 110.9ms | ActiveRecord: 0.0ms | Allocations: 6278)
+
+
+Started GET "/" for ::1 at 2020-12-16 17:14:17 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 270)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 129.6ms | ActiveRecord: 0.0ms | Allocations: 6261)
+
+
+Started GET "/" for ::1 at 2020-12-16 17:14:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.0ms | Allocations: 6276)
+
+
+Started GET "/" for ::1 at 2020-12-16 17:15:14 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 309)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 112.3ms | ActiveRecord: 0.0ms | Allocations: 6296)
+
+
