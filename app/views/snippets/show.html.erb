@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<%=react_component("snippet",@snippet.as_json) %>
+<em>REACT COMPONENT RENDERED ABOVE</em>
 <p>
   <strong>Trigger:</strong>
   <%= @snippet.trigger %>
@@ -12,7 +13,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @snippet.type %>
+  <%= @snippet.is_form %>
 </p>
 
 <p>

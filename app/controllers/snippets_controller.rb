@@ -69,6 +69,10 @@ class SnippetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def snippet_params
-      params.require(:snippet).permit(:trigger, :replacement, :type, :is_public, :tags)
+      params.require(:snippet).permit(:trigger, :replacement, :is_form, :is_public, :tags)
+    end
+
+    def json_repsone (object, status = :ok)
+      render json: object, status: status
     end
 end

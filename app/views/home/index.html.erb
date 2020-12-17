@@ -1,18 +1,4 @@
-<%=link_to "Snippets", "/snippets"%>
-<br>
-<hr>
-<%=link_to "Tags", "/tags"%>
-<br>
-<hr>
-<%=link_to "Lists", "/snippets_lists"%>
-<br>
-<hr>
-<%=link_to "Your Snippets", "/snippets_lists/main"%>
-<br>
-<hr>
-<%=link_to "Export Your Snippets", "/snippets_lists/main/export"%>
-<br>
-<hr>
-<%=link_to "Sign Out", "/users"%>
-
+<%=render "layouts/sidenav"%>
+<%=link_to "Sign Out", "/users/sign_out"%>
+<%=react_component("snippet")%>
 
