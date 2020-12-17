@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 #For Authentication and Users
 gem 'devise'
+gem 'omniauth-google-oauth2'
+# Use ActiveRecord Sessions
+gem 'activerecord-session_store', '~> 1.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 # Add YAML Export Gem

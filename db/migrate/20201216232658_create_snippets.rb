@@ -3,7 +3,7 @@ class CreateSnippets < ActiveRecord::Migration[6.0]
     create_table :snippets do |t|
       t.text :trigger
       t.text :replacement
-      t.text :type
+      t.boolean :is_form
       t.boolean :is_public
       t.text :tags
       t.references :taggable, polymorphic:true, index:true
