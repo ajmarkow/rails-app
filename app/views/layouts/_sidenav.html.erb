@@ -2,19 +2,18 @@
   <div class='ui raised card'>
     <div class='content'>
       <div class='header'><%= image_tag("semplificatologo.png", style: 'height:auto;width:80%;margin-bottom:4%') %></div>
-        <%=link_to "Snippets", "/snippets"%>
-        <br>
-        <div class='ui horizontal divider'></div>
-        <%=link_to "Explore By Tags", "/tags"%>
-        <br>
-        <div class='ui horizontal divider'></div>
-        <%=link_to "Public Lists", "/snippets_lists"%>
-        <br>
-        <div class='ui horizontal divider'></div>
+                <div class='ui horizontal divider'></div>
         <%=link_to "Your Snippets", "/snippets_lists/main"%>
         <br>
         <div class='ui horizontal divider'></div>
-        <%=link_to "Export Your Snippets", "/snippets_lists/main/export"%>
+                <%=link_to "Your Lists", "/snippets_lists"%>
+        <br>
+        <div class='ui horizontal divider'></div>
+                  <%=link_to "Export .YAML", "/snippets_lists/main/export"%>
+
+        <br>
+        <div class='ui horizontal divider'></div>
+        <%=link_to "Explore Snippets", "/snippets"%>
         <br>
         <div class='ui horizontal divider'></div>
     </div>
