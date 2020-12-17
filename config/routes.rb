@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     end
   resources :snippets_lists
   resources :snippets
+  root to: 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

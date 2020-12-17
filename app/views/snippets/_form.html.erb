@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :tags%>
-    <%= form.text_area :tags %>
+    <%= form.collection_select :slug, Tag.all, :id, :slug, prompt: true, multiple: true %>
   </div>
 
   <div class="actions">

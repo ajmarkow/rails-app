@@ -1279,3 +1279,1010 @@ Migrating to AddOmniauthToUsers (20201217002704)
   [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
   [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:56:31 -0800
+  
+PG::ConnectionBad (FATAL:  password authentication failed for user "postgres"
+):
+  
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `initialize'
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `new'
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:56:58 -0800
+  
+PG::ConnectionBad (FATAL:  password authentication failed for user "postgres"
+):
+  
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `initialize'
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `new'
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:57:23 -0800
+  
+PG::ConnectionBad (FATAL:  password authentication failed for user "postgres"
+):
+  
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `initialize'
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `new'
+pg-1.2.3-x64 (mingw32) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:57:43 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 2.2ms | Allocations: 1846)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2304)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 9.4ms | Allocations: 13167)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: snippet, local: true) do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_area :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_public %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags%>
+    <%= form.collection_select :tags, @tags,:id, :tag, include_blank:  false, :topic.slug %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: snippet, local: true) do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label :type %>
+26:        <%= form.text_area :type %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :is_public %>
+31:        <%= form.check_box :is_public %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label :tags%>
+36:        <%= form.collection_select :tags, @tags,:id, :tag, include_blank:  false, :topic.slug %>
+37:      </div>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:57:51 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 2.1ms | Allocations: 1514)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1589)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 2068)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: snippet, local: true) do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_area :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_public %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags%>
+    <%= form.collection_select :tags, @tags,:id, :tag, include_blank:  false, :topic.slug %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: snippet, local: true) do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label :type %>
+26:        <%= form.text_area :type %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :is_public %>
+31:        <%= form.check_box :is_public %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label :tags%>
+36:        <%= form.collection_select :tags, @tags,:id, :tag, include_blank:  false, :topic.slug %>
+37:      </div>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:58:28 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 88.1ms | Allocations: 9983)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 91.9ms | Allocations: 10334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 189ms (Views: 185.3ms | ActiveRecord: 0.0ms | Allocations: 20440)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-16 16:58:44 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 6.3ms | Allocations: 2553)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 61.1ms | Allocations: 2878)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms | Allocations: 4199)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 4..6)):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:00:35 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 3.9ms | Allocations: 2585)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2910)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 4229)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :slug:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, :slug, Tag.all, :id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:01:00 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 4.3ms | Allocations: 2584)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2909)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 4228)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :slug:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tag, :slug, Tag.all, :id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:01:18 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 3.4ms | Allocations: 2600)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2926)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4254)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :slug:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tag, tag.slug, Tag.all, :id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:02:11 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 106.3ms | Allocations: 6302)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 132.3ms | Allocations: 6647)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 202ms (Views: 194.0ms | ActiveRecord: 3.5ms | Allocations: 12618)
+
+
+Started GET "/tags/new" for ::1 at 2020-12-16 17:03:04 -0800
+Processing by TagsController#new as HTML
+  Rendering tags/new.html.erb within layouts/application
+  Rendered tags/_form.html.erb (Duration: 2.8ms | Allocations: 1181)
+  Rendered tags/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1529)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 63.1ms | ActiveRecord: 2.7ms | Allocations: 10652)
+
+
+Started POST "/tags" for ::1 at 2020-12-16 17:03:10 -0800
+Processing by TagsController#create as HTML
+  Parameters: {"authenticity_token"=>"0kcXK6ojoGo4v5/AIE/haPJHKlSlq6Xu7/ROWy/nVhOgRLtg3Fn2xPLYnq7GuvsTk87L1DOgC1+adkchitV9Kw==", "tag"=>{"slug"=>"Github", "is_public"=>"0"}, "commit"=>"Create Tag"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[36mTag Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."slug" = $1 LIMIT $2[0m  [["slug", "Github"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[36mTag Create (3.1ms)[0m  [1m[32mINSERT INTO "tags" ("slug", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["slug", "Github"], ["is_public", false], ["created_at", "2020-12-17 01:03:10.675143"], ["updated_at", "2020-12-17 01:03:10.675143"]]
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tags/1
+Completed 302 Found in 187ms (ActiveRecord: 6.2ms | Allocations: 4726)
+
+
+Started GET "/tags/1" for ::1 at 2020-12-16 17:03:10 -0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:67:in `set_tag'
+  Rendering tags/show.html.erb within layouts/application
+  Rendered tags/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 262)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 238ms (Views: 146.1ms | ActiveRecord: 0.9ms | Allocations: 6195)
+
+
+Started GET "/tags" for ::1 at 2020-12-16 17:03:13 -0800
+Processing by TagsController#index as HTML
+  Rendering tags/index.html.erb within layouts/application
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/tags/index.html.erb:15
+  Rendered tags/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 1102)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 112.5ms | ActiveRecord: 0.8ms | Allocations: 6266)
+
+
+Started GET "/tags/new" for ::1 at 2020-12-16 17:03:14 -0800
+Processing by TagsController#new as HTML
+  Rendering tags/new.html.erb within layouts/application
+  Rendered tags/_form.html.erb (Duration: 1.6ms | Allocations: 746)
+  Rendered tags/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 839)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms | Allocations: 5854)
+
+
+Started POST "/tags" for ::1 at 2020-12-16 17:03:18 -0800
+Processing by TagsController#create as HTML
+  Parameters: {"authenticity_token"=>"Ms6ZKMYXn9f24y1ZbZGXlEYtsux3cm/eiFK//yIIhWQAGSeZ8bYjgv2rFVMRcE+1Z44g1Hbfkhvm9ME2rk6R/Q==", "tag"=>{"slug"=>"Ruby", "is_public"=>"0"}, "commit"=>"Create Tag"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[36mTag Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."slug" = $1 LIMIT $2[0m  [["slug", "Ruby"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[36mTag Create (1.6ms)[0m  [1m[32mINSERT INTO "tags" ("slug", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["slug", "Ruby"], ["is_public", false], ["created_at", "2020-12-17 01:03:18.965442"], ["updated_at", "2020-12-17 01:03:18.965442"]]
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tags/2
+Completed 302 Found in 135ms (ActiveRecord: 3.8ms | Allocations: 4078)
+
+
+Started GET "/tags/2" for ::1 at 2020-12-16 17:03:19 -0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:67:in `set_tag'
+  Rendering tags/show.html.erb within layouts/application
+  Rendered tags/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 158ms (Views: 72.5ms | ActiveRecord: 0.5ms | Allocations: 5713)
+
+
+Started GET "/tags" for ::1 at 2020-12-16 17:03:20 -0800
+Processing by TagsController#index as HTML
+  Rendering tags/index.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/tags/index.html.erb:15
+  Rendered tags/index.html.erb within layouts/application (Duration: 84.3ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 174ms (Views: 172.0ms | ActiveRecord: 0.7ms | Allocations: 6006)
+
+
+Started GET "/tags/new" for ::1 at 2020-12-16 17:03:21 -0800
+Processing by TagsController#new as HTML
+  Rendering tags/new.html.erb within layouts/application
+  Rendered tags/_form.html.erb (Duration: 1.9ms | Allocations: 743)
+  Rendered tags/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 836)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.0ms | Allocations: 5838)
+
+
+Started POST "/tags" for ::1 at 2020-12-16 17:03:24 -0800
+Processing by TagsController#create as HTML
+  Parameters: {"authenticity_token"=>"W5XO52nIBFXfGMNgIe8XKG2SHR3rOIg2VWL54PuWXJFpQnBWXmm4ANRQ+2pdDs8JTDGPJeqVdfM7xIcpd9BICA==", "tag"=>{"slug"=>"Testing", "is_public"=>"0"}, "commit"=>"Create Tag"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[36mTag Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" WHERE "tags"."slug" = $1 LIMIT $2[0m  [["slug", "Testing"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[36mTag Create (0.6ms)[0m  [1m[32mINSERT INTO "tags" ("slug", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["slug", "Testing"], ["is_public", false], ["created_at", "2020-12-17 01:03:25.103709"], ["updated_at", "2020-12-17 01:03:25.103709"]]
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tags_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tags/3
+Completed 302 Found in 186ms (ActiveRecord: 2.6ms | Allocations: 4081)
+
+
+Started GET "/tags/3" for ::1 at 2020-12-16 17:03:25 -0800
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:67:in `set_tag'
+  Rendering tags/show.html.erb within layouts/application
+  Rendered tags/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 66.0ms | ActiveRecord: 0.4ms | Allocations: 5697)
+
+
+Started GET "/tags" for ::1 at 2020-12-16 17:03:27 -0800
+Processing by TagsController#index as HTML
+  Rendering tags/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/tags/index.html.erb:15
+  Rendered tags/index.html.erb within layouts/application (Duration: 26.7ms | Allocations: 1122)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.5ms | Allocations: 6129)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:03:32 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 1.4ms | Allocations: 1526)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1848)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms | Allocations: 2978)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: snippet, local: true) do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_area :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_public %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags%>
+    <%= form.collection_select :slug, Tag.all, :id, :slug, prompt: true, {:multiple => true} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: snippet, local: true) do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label :type %>
+26:        <%= form.text_area :type %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :is_public %>
+31:        <%= form.check_box :is_public %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label :tags%>
+36:        <%= form.collection_select :slug, Tag.all, :id, :slug, prompt: true, {:multiple => true} %>
+37:      </div>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:03:37 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 2.2ms | Allocations: 1513)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1587)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 2061)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: snippet, local: true) do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_area :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_public %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags%>
+    <%= form.collection_select :slug, Tag.all, :id, :slug, prompt: true, {:multiple => true} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: snippet, local: true) do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label :type %>
+26:        <%= form.text_area :type %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label :is_public %>
+31:        <%= form.check_box :is_public %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label :tags%>
+36:        <%= form.collection_select :slug, Tag.all, :id, :slug, prompt: true, {:multiple => true} %>
+37:      </div>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected ')', expecting =>
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-16 17:03:53 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 39.1ms | Allocations: 2641)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 44.8ms | Allocations: 2986)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 142ms (Views: 138.5ms | ActiveRecord: 0.6ms | Allocations: 9042)
+
+
+Started GET "/snippets" for ::1 at 2020-12-16 17:04:35 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (3.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 93.1ms | ActiveRecord: 3.0ms | Allocations: 6182)
+
+
+Started GET "/tags" for ::1 at 2020-12-16 17:06:46 -0800
+Processing by TagsController#index as HTML
+  Rendering tags/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/tags/index.html.erb:15
+  Rendered tags/index.html.erb within layouts/application (Duration: 45.3ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 232ms (Views: 228.7ms | ActiveRecord: 0.6ms | Allocations: 7404)
+
+
+Started GET "/snippets" for ::1 at 2020-12-16 17:06:51 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 123.7ms | ActiveRecord: 0.7ms | Allocations: 6678)
+
+
+Started GET "/snippets_lists" for ::1 at 2020-12-16 17:06:56 -0800
+Processing by SnippetsListsController#index as HTML
+  Rendering snippets_lists/index.html.erb within layouts/application
+  [1m[36mSnippetsList Load (3.3ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists"[0m
+  ↳ app/views/snippets_lists/index.html.erb:15
+  Rendered snippets_lists/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 1465)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 113.7ms | ActiveRecord: 5.2ms | Allocations: 8303)
+
+
+Started GET "/" for ::1 at 2020-12-16 17:09:36 -0800
+  
+NoMethodError (undefined method `to' for #<ActionDispatch::Routing::Mapper:0x000000000a697f08>):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2020-12-16 17:10:00 -0800
+  
+NoMethodError (undefined method `root_to' for #<ActionDispatch::Routing::Mapper:0x000000000e6fb5e0>):
+  
+config/routes.rb:11:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2020-12-16 17:10:22 -0800
+  
+Zeitwerk::NameError (expected file C:/Users/alexa/Documents/rails-app/app/controllers/home_controller.rb to define constant HomeController, but didn't):
+  
+zeitwerk (2.4.2) lib/zeitwerk/loader/callbacks.rb:18:in `on_file_autoloaded'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:27:in `block in require'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `tap'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `require'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.3.4) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:89:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:100:in `binary_params_for?'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:91:in `set_binary_encoding'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:47:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:192:in `call!'
+omniauth (1.9.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.1) lib/omniauth/builder.rb:45:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-16 17:11:03 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.0ms | Allocations: 6413)
+
+
