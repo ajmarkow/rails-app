@@ -1,3 +1,10 @@
----
-:- trigger: ":thisismysnippet"
-:replacement: Isnt my snippet cool?
+
+  - trigger:":AJISCOOL"
+    replace:"AJISTHECOOLEST"  - trigger:":AJISCOOL"
+    replace:"AJISTHECOOLEST"
+  - trigger:":AJISCOOL"
+    replace:"AJISTHECOOLEST"
+  - trigger:":AJISCOOL"
+    replace:"AJISTHECOOLEST"
+  - trigger:":whatsup"
+    replace:"not much, you?"

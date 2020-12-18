@@ -1,12 +1,12 @@
 require 'yaml'
-
-snippet = {'- trigger': ":thisismysnippet",
-              'replacement': "Isnt my snippet cool?" }
-
-  def yamlfileexport(snippet)
-    File.open("test.yml","w") { |file| file.write(snippet.to_yaml) }
+const NEW_LINE="\n"
+const trigger="whatsup"
+const replacement="not much, you?"
+  def yamlfileexport(trigger,replacement)
+    File.open("test.yml","a") { |file| file.write('  - trigger:'+'":'+trigger+'"'+NEW_LINE) }
+    File.open("test.yml","a") { |file| file.write('    replace:'+'"'+replacement+'"'+NEW_LINE) }
     puts "SAVING TO YAML NOW"
   end
 
-  yamlfileexport(snippet)
+  yamlfileexport(trigger,replacement)
 
