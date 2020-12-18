@@ -8,3 +8,13 @@
     replace:"AJISTHECOOLEST"
   - trigger:":whatsup"
     replace:"not much, you?"
+  - trigger:":yo"
+    form:"I chose {{choices}}"
+    form_fields:
+      choices
+       type:choice
+       values:
+          - "eenie"
+          - "meenie"
+          - "minie"
+          - "moe"
