@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 class Snippet extends React.Component {
   render () {
     return (
@@ -15,4 +16,4 @@ Snippet.propTypes = {
   trigger: PropTypes.string,
   replacement: PropTypes.string
 };
-export default Snippet
+export default Snippet;

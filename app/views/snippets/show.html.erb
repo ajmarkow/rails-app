@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-<%=react_component("snippet",@snippet.as_json) %>
+<%=react_component("Snippet",{trigger:"hi",replacement:"how are you"}) %>
 <em>REACT COMPONENT RENDERED ABOVE</em>
+<br>
 <p>
   <strong>Trigger:</strong>
   <%= @snippet.trigger %>

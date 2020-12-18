@@ -4806,3 +4806,1989 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.0ms | Allocations: 7699)
 
 
+Started GET "/" for 127.0.0.1 at 2020-12-17 15:56:55 -0800
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 279.8ms | Allocations: 14372)
+  Rendered layouts/_signin.html.erb (Duration: 20.8ms | Allocations: 4569)
+  Rendered home/index.html.erb within layouts/application (Duration: 400.6ms | Allocations: 19642)
+Completed 500 Internal Server Error in 424ms (ActiveRecord: 0.0ms | Allocations: 21714)
+
+
+  
+ActionView::Template::Error (The asset "google_default_sign_in.png" is not present in the asset pipeline.
+):
+    1: <div class='four wide column'>
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:     <%= image_tag('google_default_sign_in.png')%>
+    5:     </div>
+    6:   </div>
+    7: </div>
+  
+app/views/layouts/_signin.html.erb:4
+app/views/home/index.html.erb:2
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2020-12-17 15:57:07 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.6ms | Allocations: 813)
+  Rendered layouts/_signin.html.erb (Duration: 230.7ms | Allocations: 13393)
+  Rendered home/index.html.erb within layouts/application (Duration: 261.6ms | Allocations: 14457)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 360ms (Views: 358.7ms | ActiveRecord: 0.0ms | Allocations: 19564)
+
+
+Started GET "/" for ::1 at 2020-12-17 15:58:05 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.7ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 743)
+  Rendered home/index.html.erb within layouts/application (Duration: 42.4ms | Allocations: 2443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 128ms (Views: 127.3ms | ActiveRecord: 0.0ms | Allocations: 8370)
+
+
+Started GET "/" for ::1 at 2020-12-17 15:58:49 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 745)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 2438)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.0ms | Allocations: 8357)
+
+
+Started GET "/" for ::1 at 2020-12-17 15:58:52 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.8ms | Allocations: 812)
+  Rendered layouts/_signin.html.erb (Duration: 3.7ms | Allocations: 629)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 1680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.0ms | Allocations: 6564)
+
+
+Started GET "/" for ::1 at 2020-12-17 15:59:38 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 8.9ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 5.6ms | Allocations: 744)
+  Rendered home/index.html.erb within layouts/application (Duration: 68.3ms | Allocations: 2437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 161ms (Views: 159.7ms | ActiveRecord: 0.0ms | Allocations: 8348)
+
+
+Started GET "/" for ::1 at 2020-12-17 15:59:42 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.1ms | Allocations: 811)
+  Rendered layouts/_signin.html.erb (Duration: 2.7ms | Allocations: 629)
+  Rendered home/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 1678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 85.5ms | ActiveRecord: 0.0ms | Allocations: 6550)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:00:04 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 16.8ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 3.0ms | Allocations: 751)
+  Rendered home/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 2445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.0ms | Allocations: 8377)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:00:08 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.8ms | Allocations: 811)
+  Rendered layouts/_signin.html.erb (Duration: 4.9ms | Allocations: 629)
+  Rendered home/index.html.erb within layouts/application (Duration: 47.9ms | Allocations: 1679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 95.5ms | ActiveRecord: 0.0ms | Allocations: 6554)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:01:02 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.6ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 3.5ms | Allocations: 744)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 2438)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 97.3ms | ActiveRecord: 0.0ms | Allocations: 8353)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:01:25 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.7ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 3.5ms | Allocations: 744)
+  Rendered home/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 2437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.0ms | Allocations: 8350)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:03:23 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.6ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 4.8ms | Allocations: 743)
+  Rendered home/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 2436)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.0ms | Allocations: 8368)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-17 16:03:25 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (2.6ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 43ms (ActiveRecord: 14.4ms | Allocations: 3719)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/" for ::1 at 2020-12-17 16:03:28 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 11.6ms | Allocations: 812)
+  Rendered layouts/_signin.html.erb (Duration: 9.0ms | Allocations: 629)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 1679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 121.9ms | ActiveRecord: 0.0ms | Allocations: 6578)
+
+
+Started GET "/snippets_lists" for ::1 at 2020-12-17 16:03:30 -0800
+Processing by SnippetsListsController#index as HTML
+  Rendering snippets_lists/index.html.erb within layouts/application
+  [1m[36mSnippetsList Load (0.5ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists"[0m
+  ↳ app/views/snippets_lists/index.html.erb:15
+  Rendered snippets_lists/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 994)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.5ms | Allocations: 6700)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-17 16:03:34 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (0.4ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1254)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/" for ::1 at 2020-12-17 16:03:37 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.5ms | Allocations: 813)
+  Rendered layouts/_signin.html.erb (Duration: 3.3ms | Allocations: 629)
+  Rendered home/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 1680)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms | Allocations: 6566)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-17 16:03:45 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (5.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 88.1ms | Allocations: 10717)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 96.1ms | Allocations: 11066)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 198ms (Views: 154.6ms | ActiveRecord: 15.8ms | Allocations: 25367)
+
+
+Started GET "/snippets" for ::1 at 2020-12-17 16:03:50 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (3.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 90.7ms | ActiveRecord: 3.5ms | Allocations: 6205)
+
+
+Started GET "/snippets" for ::1 at 2020-12-17 16:03:58 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.7ms | Allocations: 5739)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:04:01 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 811)
+  Rendered layouts/_signin.html.erb (Duration: 2.4ms | Allocations: 629)
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1678)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms | Allocations: 6555)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:13:46 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 1049)
+  Rendered layouts/_signin.html.erb (Duration: 4.2ms | Allocations: 743)
+  Rendered layouts/_search_small.html.erb (Duration: 914.2ms | Allocations: 202523)
+  Rendered home/index.html.erb within layouts/application (Duration: 947.5ms | Allocations: 205105)
+Completed 500 Internal Server Error in 968ms (ActiveRecord: 0.0ms | Allocations: 206367)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x0000000009f834d8>:0x0000000009fcb878>):
+    1: <div class='four wide column'>
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:       <span class='search'><div class='ui input' placeholder='your query'></div><%= fa_icon "search"%></span>
+    5:     </div>
+    6:   </div>
+    7: </div>
+  
+app/views/layouts/_search_small.html.erb:4
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:14:24 -0800
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 796.2ms | Allocations: 27023)
+  Rendered layouts/_signin.html.erb (Duration: 4.4ms | Allocations: 765)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 159)
+  Rendered home/index.html.erb within layouts/application (Duration: 833.8ms | Allocations: 28978)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1085ms (Views: 1079.5ms | ActiveRecord: 0.0ms | Allocations: 41249)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:14:32 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.6ms | Allocations: 832)
+  Rendered layouts/_signin.html.erb (Duration: 5.3ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 1.6ms | Allocations: 40)
+  Rendered home/index.html.erb within layouts/application (Duration: 47.2ms | Allocations: 1822)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 115ms (Views: 114.1ms | ActiveRecord: 0.0ms | Allocations: 6450)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:15:10 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.4ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 4.1ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 1.8ms | Allocations: 154)
+  Rendered home/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 2849)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 137.0ms | ActiveRecord: 0.0ms | Allocations: 8811)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:15:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 1071)
+  Rendered layouts/_signin.html.erb (Duration: 5.0ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 154)
+  Rendered home/index.html.erb within layouts/application (Duration: 47.9ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 167ms (Views: 166.2ms | ActiveRecord: 0.0ms | Allocations: 8824)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:15:54 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.7ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.8ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 156)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 2848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 139ms (Views: 138.2ms | ActiveRecord: 0.0ms | Allocations: 8803)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:17:40 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.8ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.0ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 90.3ms | Allocations: 4639)
+  Rendered home/index.html.erb within layouts/application (Duration: 126.1ms | Allocations: 7240)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.0ms | Allocations: 8515)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class='four wide column'>
+  <div class='ui raised card'>
+    <div class='content'>
+    <%=form_with do |search|%>
+        <%= form.label :query, "Search for:",class:"ui input;" %>
+        <%= form.text_field :query %>
+      <span class='search'><input class='ui input' width='100%' placeholder='your query'></span><%= fa_icon "search"%></span>
+
+    </div>
+  </div>
+</div>
+  
+):
+1:    <div class='four wide column'>
+2:      <div class='ui raised card'>
+3:        <div class='content'>
+4:        <%=form_with do |search|%>
+5:            <%= form.label :query, "Search for:",class:"ui input;" %>
+6:            <%= form.text_field :query %>
+7:          <span class='search'><input class='ui input' width='100%' placeholder='your query'></span><%= fa_icon "search"%></span>
+8:    
+9:        </div>
+10:      </div>
+11:    </div>
+12:      
+  
+app/views/layouts/_search_small.html.erb:14: syntax error, unexpected end-of-input, expecting end
+app/views/layouts/_search_small.html.erb:14: syntax error, unexpected end-of-input, expecting end
+app/views/layouts/_search_small.html.erb:14: syntax error, unexpected end-of-input, expecting end
+app/views/layouts/_search_small.html.erb:14: syntax error, unexpected end-of-input, expecting end
+app/views/layouts/_search_small.html.erb:14: syntax error, unexpected end-of-input, expecting end
+app/views/layouts/_search_small.html.erb:14: syntax error, unexpected end-of-input, expecting end
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:17:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.5ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 3.5ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 955.3ms | Allocations: 216824)
+  Rendered home/index.html.erb within layouts/application (Duration: 998.8ms | Allocations: 219429)
+Completed 500 Internal Server Error in 1061ms (ActiveRecord: 0.0ms | Allocations: 220706)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x000000000a2682e8>:0x000000000a2713c0>):
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:     <%=form_with do |search|%>
+    5:         <%= form.label :query, "Search for:",class:"ui input;" %>
+    6:         <%= form.text_field :query %>
+    7:       <span class='search'><input class='ui input' width='100%' placeholder='your query'></span><%= fa_icon "search"%></span>
+    8:     <%end%>
+  
+app/views/layouts/_search_small.html.erb:5
+app/views/layouts/_search_small.html.erb:4
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:18:39 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.6ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 4.5ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 890.6ms | Allocations: 216760)
+  Rendered home/index.html.erb within layouts/application (Duration: 930.8ms | Allocations: 219365)
+Completed 500 Internal Server Error in 984ms (ActiveRecord: 0.0ms | Allocations: 220642)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x0000000009672f38>:0x00000000096f3d18>):
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:       <%=form_with do |search|%>
+    5:           <%= form.label :query, "Search for:",class:"ui input;" %>
+    6:           <%= form.text_field :query %>
+    7:       <%end%>
+    8:     </div>
+  
+app/views/layouts/_search_small.html.erb:5
+app/views/layouts/_search_small.html.erb:4
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:19:39 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.4ms | Allocations: 832)
+  Rendered layouts/_signin.html.erb (Duration: 3.6ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 953.6ms | Allocations: 216583)
+  Rendered home/index.html.erb within layouts/application (Duration: 992.1ms | Allocations: 218273)
+Completed 500 Internal Server Error in 1023ms (ActiveRecord: 0.0ms | Allocations: 218713)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x0000000009672f38>:0x000000000eaf2568>):
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:       <%=form_with do |search|%>
+    5:           <%= form.label :query, "Search for:",class:"ui input;" %>
+    6:           <%= form.text_field :query %>
+    7:       <%end%>
+    8:     </div>
+  
+app/views/layouts/_search_small.html.erb:5
+app/views/layouts/_search_small.html.erb:4
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:19:46 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.2ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 6.1ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 1333.1ms | Allocations: 216760)
+  Rendered home/index.html.erb within layouts/application (Duration: 1603.0ms | Allocations: 219365)
+Completed 500 Internal Server Error in 1765ms (ActiveRecord: 0.0ms | Allocations: 220642)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x000000000f4c6990>:0x000000000f4c5040>):
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:       <%= form_with do |search|%>
+    5:           <%= form.label :query, "Search for:",class:"ui input;" %>
+    6:           <%= form.text_field :query %>
+    7:       <%end%>
+    8:     </div>
+  
+app/views/layouts/_search_small.html.erb:5
+app/views/layouts/_search_small.html.erb:4
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:19:54 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.3ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 5.0ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 994.8ms | Allocations: 216679)
+  Rendered home/index.html.erb within layouts/application (Duration: 1038.7ms | Allocations: 219286)
+Completed 500 Internal Server Error in 1087ms (ActiveRecord: 0.0ms | Allocations: 220563)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x000000000f4d6278>:0x000000000f4d4950>):
+    1: <div class='four wide column'>
+    2:   <div class='ui raised card'>
+    3:     <div class='content'>
+    4:           <%= form.label :query, "Search for:",class:"ui input;" %>
+    5:           <%= form.text_field :query %>
+    6:     </div>
+    7:   </div>
+  
+app/views/layouts/_search_small.html.erb:4
+app/views/home/index.html.erb:3
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:20:34 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.6ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 2.6ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered home/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 2797)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 90.5ms | ActiveRecord: 0.0ms | Allocations: 8773)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:20:44 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.0ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 5.3ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.9ms | Allocations: 100)
+  Rendered home/index.html.erb within layouts/application (Duration: 99.1ms | Allocations: 2802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 181ms (Views: 179.7ms | ActiveRecord: 0.0ms | Allocations: 8761)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:20:55 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.3ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 5.0ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 100)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 2804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 135ms (Views: 134.2ms | ActiveRecord: 0.0ms | Allocations: 8761)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:21:04 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.0ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.9ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 100)
+  Rendered home/index.html.erb within layouts/application (Duration: 51.0ms | Allocations: 2798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 120.7ms | ActiveRecord: 0.0ms | Allocations: 8767)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:23:26 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.1ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.8ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 101)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 2799)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 136ms (Views: 135.2ms | ActiveRecord: 0.0ms | Allocations: 8761)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:23:54 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.4ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 5.3ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.9ms | Allocations: 160)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.0ms | Allocations: 2858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 116.7ms | ActiveRecord: 0.0ms | Allocations: 8817)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:23:58 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.5ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 9.2ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered home/index.html.erb within layouts/application (Duration: 62.9ms | Allocations: 1820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 171ms (Views: 170.7ms | ActiveRecord: 0.0ms | Allocations: 6745)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:24:56 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.5ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 2.5ms | Allocations: 1253)
+  Rendered home/index.html.erb within layouts/application (Duration: 71.5ms | Allocations: 3869)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms | Allocations: 5131)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class='four wide column'>
+  <div class='ui raised card'>
+    <div class='content'>
+     <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%=fa_icon "search",style:'color:#000000;%>
+    </div>
+  </div>
+</div>
+  
+):
+1:    <div class='four wide column'>
+2:      <div class='ui raised card'>
+3:        <div class='content'>
+4:         <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%=fa_icon "search",style:'color:#000000;%>
+5:        </div>
+6:      </div>
+7:    </div>
+8:      
+  
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:4
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:25:03 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.9ms | Allocations: 832)
+  Rendered layouts/_signin.html.erb (Duration: 4.2ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 1.2ms | Allocations: 1240)
+  Rendered home/index.html.erb within layouts/application (Duration: 82.0ms | Allocations: 2930)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms | Allocations: 3355)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class='four wide column'>
+  <div class='ui raised card'>
+    <div class='content'>
+     <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%=fa_icon "search",style:'color:#000000;%>
+    </div>
+  </div>
+</div>
+  
+):
+1:    <div class='four wide column'>
+2:      <div class='ui raised card'>
+3:        <div class='content'>
+4:         <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%=fa_icon "search",style:'color:#000000;%>
+5:        </div>
+6:      </div>
+7:    </div>
+8:      
+  
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:6: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:10: unterminated regexp meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:4
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:25:33 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 8.1ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 3.8ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 1.3ms | Allocations: 1252)
+  Rendered home/index.html.erb within layouts/application (Duration: 82.1ms | Allocations: 3863)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms | Allocations: 5125)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class='four wide column'>
+  <div class='ui raised card'>
+    <div class='content'>
+     <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%=fa_icon "search",style:'color:#000000;%></input>
+    </div>
+  </div>
+</div>
+  
+):
+1:    <div class='four wide column'>
+2:      <div class='ui raised card'>
+3:        <div class='content'>
+4:         <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%=fa_icon "search",style:'color:#000000;%></input>
+5:        </div>
+6:      </div>
+7:    </div>
+8:      
+  
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:4
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:25:43 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.2ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 3.2ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 16.7ms | Allocations: 1251)
+  Rendered home/index.html.erb within layouts/application (Duration: 130.8ms | Allocations: 3862)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms | Allocations: 5125)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class='four wide column'>
+  <div class='ui raised card'>
+    <div class='content'>
+     <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%= fa_icon "search",style:'color:#000000;%></input>
+    </div>
+  </div>
+</div>
+  
+):
+1:    <div class='four wide column'>
+2:      <div class='ui raised card'>
+3:        <div class='content'>
+4:         <input type='text' class='ui input' style='height:auto;width:80%;margin-bottom:4%'><%= fa_icon "search",style:'color:#000000;%></input>
+5:        </div>
+6:      </div>
+7:    </div>
+8:      
+  
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/_search_small.html.erb:5: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:6: syntax error, unexpected '<'
+app/views/layouts/_search_small.html.erb:7: unknown regexp options - dv
+app/views/layouts/_search_small.html.erb:10: unterminated string meets end of file
+app/views/layouts/_search_small.html.erb:10: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:4
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2020-12-17 16:26:37 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.6ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 3.0ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 1.1ms | Allocations: 103)
+  Rendered home/index.html.erb within layouts/application (Duration: 63.5ms | Allocations: 2805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 169ms (Views: 168.7ms | ActiveRecord: 0.0ms | Allocations: 8760)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:26:52 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.7ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.3ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 166)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 2864)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119ms (Views: 117.9ms | ActiveRecord: 0.0ms | Allocations: 8811)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:28:11 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.9ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.6ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 1.0ms | Allocations: 171)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 2869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.0ms | Allocations: 8823)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:28:57 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 171)
+  Rendered home/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 2877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 115.2ms | ActiveRecord: 0.0ms | Allocations: 8834)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:29:04 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.1ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered home/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 1829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms | Allocations: 6749)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:30:37 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.8ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.0ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 168)
+  Rendered home/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2866)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 69.6ms | ActiveRecord: 0.0ms | Allocations: 8822)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:31:19 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.3ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 107)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.4ms | Allocations: 2805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 102.1ms | ActiveRecord: 0.0ms | Allocations: 8767)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:31:23 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 4.0ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 54.7ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 131ms (Views: 129.4ms | ActiveRecord: 0.0ms | Allocations: 6709)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:31:45 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.0ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.2ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.4ms | Allocations: 104)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 2802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 147ms (Views: 146.1ms | ActiveRecord: 0.0ms | Allocations: 8746)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:31:49 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.9ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 2.9ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.0ms | Allocations: 6705)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:33:15 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.5ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 2.8ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 106)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.4ms | Allocations: 2804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 326ms (Views: 325.0ms | ActiveRecord: 0.0ms | Allocations: 17684)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:34:26 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.0ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 3.8ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered home/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 101.5ms | ActiveRecord: 0.0ms | Allocations: 8756)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:34:34 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.1ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 2.5ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 91.5ms | ActiveRecord: 0.0ms | Allocations: 6669)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:35:04 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.2ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.8ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered home/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 2806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.0ms | Allocations: 8722)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:35:11 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.3ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 4.3ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 72.4ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 137ms (Views: 135.9ms | ActiveRecord: 0.0ms | Allocations: 6683)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:35:16 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.6ms | Allocations: 830)
+  Rendered layouts/_signin.html.erb (Duration: 2.6ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 1784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 84.1ms | ActiveRecord: 0.0ms | Allocations: 6673)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:35:40 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.7ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 4.7ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.9ms | Allocations: 104)
+  Rendered home/index.html.erb within layouts/application (Duration: 63.7ms | Allocations: 2803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 169ms (Views: 168.2ms | ActiveRecord: 0.0ms | Allocations: 8731)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:35:48 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.9ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.7ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 104)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.1ms | Allocations: 2802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 144ms (Views: 142.7ms | ActiveRecord: 0.0ms | Allocations: 8726)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:36:38 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.4ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.2ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered home/index.html.erb within layouts/application (Duration: 76.2ms | Allocations: 2806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 169ms (Views: 168.3ms | ActiveRecord: 0.0ms | Allocations: 8728)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:36:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.4ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered home/index.html.erb within layouts/application (Duration: 30.3ms | Allocations: 2806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.0ms | Allocations: 8734)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:38:07 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.1ms | Allocations: 1070)
+  Rendered layouts/_signin.html.erb (Duration: 2.9ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.7ms | Allocations: 2813)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 122.3ms | ActiveRecord: 0.0ms | Allocations: 8766)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:38:36 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.4ms | Allocations: 1069)
+  Rendered layouts/_signin.html.erb (Duration: 3.5ms | Allocations: 755)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered home/index.html.erb within layouts/application (Duration: 36.6ms | Allocations: 2801)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 101.9ms | ActiveRecord: 0.0ms | Allocations: 8723)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:38:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.3ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 6.6ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 71.0ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 397ms (Views: 395.9ms | ActiveRecord: 0.0ms | Allocations: 15497)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:39:07 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.5ms | Allocations: 830)
+  Rendered layouts/_signin.html.erb (Duration: 3.5ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 1784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 237ms (Views: 235.6ms | ActiveRecord: 0.0ms | Allocations: 14564)
+
+
+Started GET "/" for ::1 at 2020-12-17 16:42:18 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.9ms | Allocations: 830)
+  Rendered layouts/_signin.html.erb (Duration: 2.8ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 1784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.0ms | Allocations: 6663)
+
+
+Started GET "/" for ::1 at 2020-12-17 18:58:58 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.8ms | Allocations: 830)
+  Rendered layouts/_signin.html.erb (Duration: 2.8ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 1784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 135ms (Views: 133.8ms | ActiveRecord: 0.0ms | Allocations: 6659)
+
+
+Started GET "/" for ::1 at 2020-12-17 18:59:38 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.5ms | Allocations: 831)
+  Rendered layouts/_signin.html.erb (Duration: 4.7ms | Allocations: 641)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered home/index.html.erb within layouts/application (Duration: 68.1ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 312ms (Views: 310.9ms | ActiveRecord: 0.0ms | Allocations: 15453)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-18 07:46:50 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (5.3ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 71ms (ActiveRecord: 30.3ms | Allocations: 3800)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/" for ::1 at 2020-12-18 07:46:54 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 437.4ms | Allocations: 16211)
+  Rendered layouts/_signin.html.erb (Duration: 6.7ms | Allocations: 761)
+  Rendered layouts/_search_small.html.erb (Duration: 1.0ms | Allocations: 105)
+  Rendered home/index.html.erb within layouts/application (Duration: 512.2ms | Allocations: 17987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 676ms (Views: 674.6ms | ActiveRecord: 0.0ms | Allocations: 23967)
+
+
+Started GET "/snippets" for ::1 at 2020-12-18 07:47:02 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (4.9ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 1723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 156ms (Views: 143.5ms | ActiveRecord: 7.6ms | Allocations: 8261)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-18 07:47:06 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 73.6ms | Allocations: 10727)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 118.4ms | Allocations: 11077)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 233ms (Views: 197.3ms | ActiveRecord: 12.0ms | Allocations: 23405)
+
+
+Started POST "/snippets" for ::1 at 2020-12-18 07:47:20 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"1rg+QXz3vtttaQtIgLnLzZm68df620gdGJBVadWQJf6gOy4ba0u72afGCs1zbd8v2fTeNOZ9iE/Bh2GTA5IAGA==", "snippet"=>{"trigger"=>"test", "replacement"=>"testing yo!", "is_form"=>"0", "is_public"=>"1", "slug"=>"3"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :slug[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.1ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-18 15:47:20.880894"], ["updated_at", "2020-12-18 15:47:20.880894"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/3
+Completed 302 Found in 258ms (ActiveRecord: 4.4ms | Allocations: 3315)
+
+
+Started GET "/snippets/3" for ::1 at 2020-12-18 07:47:21 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSnippet Load (0.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered snippets/show.html.erb within layouts/application (Duration: 181.7ms | Allocations: 10328)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 0.8ms | Allocations: 11710)
+
+
+  
+ActionView::Template::Error (Webpacker can't find server_rendering.js in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-c229f7c7014cf8c8d494.js",
+  "application.js.map": "/packs/js/application-c229f7c7014cf8c8d494.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js"
+      ],
+      "js.map": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-87f42d45ac91793da730.js",
+  "hello_react.js.map": "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+}
+):
+    1: <p id="notice"><%= notice %></p>
+    2: <%=react_component("snippet",@snippet.as_json,{prerender: true}) %>
+    3: <em>REACT COMPONENT RENDERED ABOVE</em>
+    4: <p>
+    5:   <strong>Trigger:</strong>
+  
+app/views/snippets/show.html.erb:2
+Started GET "/snippets/3" for 127.0.0.1 at 2020-12-18 07:49:09 -0800
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSnippet Load (3.9ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (2.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered snippets/show.html.erb within layouts/application (Duration: 203.5ms | Allocations: 11854)
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 21.5ms | Allocations: 23918)
+
+
+  
+ActionView::Template::Error (Webpacker can't find server_rendering.js in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-c229f7c7014cf8c8d494.js",
+  "application.js.map": "/packs/js/application-c229f7c7014cf8c8d494.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js"
+      ],
+      "js.map": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-87f42d45ac91793da730.js",
+  "hello_react.js.map": "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+}
+):
+    1: <p id="notice"><%= notice %></p>
+    2: <%=react_component("snippet",@snippet.as_json,{prerender: true}) %>
+    3: <em>REACT COMPONENT RENDERED ABOVE</em>
+    4: <p>
+    5:   <strong>Trigger:</strong>
+  
+app/views/snippets/show.html.erb:2
+Started GET "/" for ::1 at 2020-12-18 07:52:24 -0800
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 50.7ms | Allocations: 6455)
+  Rendered layouts/_signin.html.erb (Duration: 3.5ms | Allocations: 775)
+  Rendered layouts/_search_small.html.erb (Duration: 0.9ms | Allocations: 105)
+  Rendered home/index.html.erb within layouts/application (Duration: 98.7ms | Allocations: 8373)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 183ms (Views: 176.4ms | ActiveRecord: 0.0ms | Allocations: 15060)
+
+
+Started GET "/snippets/2" for ::1 at 2020-12-18 07:52:32 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSnippet Load (3.9ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+Completed 404 Not Found in 33ms (ActiveRecord: 12.9ms | Allocations: 3542)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Snippet with 'id'=2):
+  
+app/controllers/snippets_controller.rb:67:in `set_snippet'
+Started GET "/snippets/new" for ::1 at 2020-12-18 07:54:51 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (2.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 167.3ms | Allocations: 13947)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 184.4ms | Allocations: 14298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 306ms (Views: 280.9ms | ActiveRecord: 7.8ms | Allocations: 27055)
+
+
+Started POST "/snippets" for ::1 at 2020-12-18 07:55:08 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"Y/JU8vmv+J58BKNpRWHwPkP6jvq2umLluQ02qWWiVPUR8fi5j9WuMLZjogejlOpFInNveiCxzFTMjz/TwJB/zQ==", "snippet"=>{"trigger"=>"testing", "replacement"=>"its a test", "is_form"=>"0", "is_public"=>"1", "slug"=>"3"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :slug[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.2ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-18 15:55:08.614167"], ["updated_at", "2020-12-18 15:55:08.614167"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/4
+Completed 302 Found in 163ms (ActiveRecord: 3.7ms | Allocations: 3297)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 07:55:09 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (1.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered snippets/show.html.erb within layouts/application (Duration: 160.0ms | Allocations: 10337)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 1.7ms | Allocations: 11570)
+
+
+  
+ActionView::Template::Error (Webpacker can't find server_rendering.js in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-c229f7c7014cf8c8d494.js",
+  "application.js.map": "/packs/js/application-c229f7c7014cf8c8d494.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js"
+      ],
+      "js.map": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-87f42d45ac91793da730.js",
+  "hello_react.js.map": "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+}
+):
+    1: <p id="notice"><%= notice %></p>
+    2: <%=react_component("snippet",@snippet.as_json,{prerender: true}) %>
+    3: <em>REACT COMPONENT RENDERED ABOVE</em>
+    4: <p>
+    5:   <strong>Trigger:</strong>
+  
+app/views/snippets/show.html.erb:2
+Started GET "/snippets/4" for ::1 at 2020-12-18 07:57:34 -0800
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (3.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: 76145d9ce4575ebaa29b
+Version: webpack 4.44.2
+Time: 4517ms
+Built at: 12/18/2020 7:57:44 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered snippets/show.html.erb within layouts/application (Duration: 9966.7ms | Allocations: 14411)
+Completed 500 Internal Server Error in 10083ms (ActiveRecord: 18.3ms | Allocations: 26489)
+
+
+  
+ActionView::Template::Error (Webpacker can't find server_rendering.js in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-c229f7c7014cf8c8d494.js",
+  "application.js.map": "/packs/js/application-c229f7c7014cf8c8d494.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js"
+      ],
+      "js.map": [
+        "/packs/js/application-c229f7c7014cf8c8d494.js.map"
+      ]
+    }
+  }
+}
+):
+    1: <p id="notice"><%= notice %></p>
+    2: <%=react_component("snippet",@snippet.as_json,{prerender: true}) %>
+    3: <em>REACT COMPONENT RENDERED ABOVE</em>
+    4: <p>
+    5:   <strong>Trigger:</strong>
+  
+app/views/snippets/show.html.erb:2
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:01:46 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (4.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: a552dbb3c188da485650
+Version: webpack 4.44.2
+Time: 5221ms
+Built at: 12/18/2020 8:01:56 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-c2814451d509dc60040d.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-c2814451d509dc60040d.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-a272390ea1873d191068.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-a272390ea1873d191068.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-c2814451d509dc60040d.js js/application-c2814451d509dc60040d.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-a272390ea1873d191068.js js/server_rendering-a272390ea1873d191068.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered snippets/show.html.erb within layouts/application (Duration: 11252.0ms | Allocations: 18407)
+Completed 500 Internal Server Error in 11352ms (ActiveRecord: 20.4ms | Allocations: 30488)
+
+
+  
+ActionView::Template::Error (Encountered error "#<ExecJS::ProgramError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.>" when prerendering snippet with {"id":4,"trigger":null,"replacement":null,"is_form":null,"is_public":null,"tags":[],"taggable_type":null,"taggable_id":null,"user_id":null,"created_at":"2020-12-18T15:55:08.614Z","updated_at":"2020-12-18T15:55:08.614Z"}
+ReactDOMServerRenderer.render (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:5195:21)
+ReactDOMServerRenderer.read (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:4852:33)
+Object.renderToString (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:5429:31)
+Object.serverRender (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:34184:42)
+eval (eval at <anonymous> (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:35825:8), <anonymous>:6:45)
+eval (eval at <anonymous> (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:35825:8), <anonymous>:18:13)
+C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:35825:8
+C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:35831:14
+C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:1:40
+Object.<anonymous> (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-17uobpujs:1:58)
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:39:in `exec'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:21:in `eval'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering/exec_js_renderer.rb:39:in `render_from_parts'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering/exec_js_renderer.rb:20:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering/bundle_renderer.rb:40:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering.rb:27:in `block in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:63:in `block (2 levels) in with'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:62:in `handle_interrupt'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:62:in `block in with'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:59:in `handle_interrupt'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:59:in `with'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering.rb:26:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/component_mount.rb:74:in `prerender_component'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/component_mount.rb:38:in `block in react_component'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/capture_helper.rb:45:in `block in capture'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/capture_helper.rb:209:in `with_output_buffer'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/capture_helper.rb:45:in `capture'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/tag_helper.rb:273:in `content_tag'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/component_mount.rb:57:in `react_component'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/view_helper.rb:21:in `react_component'
+C:/Users/alexa/Documents/rails-app/app/views/snippets/show.html.erb:2:in `_app_views_snippets_show_html_erb__192949841_76233300'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/base.rb:274:in `_run'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/template.rb:185:in `block in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:182:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/template.rb:385:in `instrument_render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/template.rb:183:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:58:in `block (2 levels) in render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/abstract_renderer.rb:88:in `block in instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/abstract_renderer.rb:87:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:57:in `block in render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:65:in `render_with_layout'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:56:in `render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:13:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:117:in `block in _render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/base.rb:304:in `in_rendering_context'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:116:in `_render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/streaming.rb:218:in `_render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:103:in `render_to_body'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/rendering.rb:25:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rendering.rb:36:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+C:/Ruby26-x64/lib/ruby/2.6.0/benchmark.rb:308:in `realtime'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/benchmark.rb:14:in `ms'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:43:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/implicit_render.rb:35:in `default_render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:195:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rendering.rb:30:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:39:in `process'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:192:in `call!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:169:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:192:in `call!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:169:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/builder.rb:45:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:132:in `call_app'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:28:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:17:in `catch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:17:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/webpacker-4.3.0/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/configuration.rb:228:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/server.rb:713:in `handle_request'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/server.rb:472:in `process_client'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/server.rb:328:in `block in run'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/thread_pool.rb:134:in `block in spawn_thread'):
+    1: <p id="notice"><%= notice %></p>
+    2: <%=react_component("snippet",@snippet.as_json,{prerender: true}) %>
+    3: <em>REACT COMPONENT RENDERED ABOVE</em>
+    4: <p>
+    5:   <strong>Trigger:</strong>
+  
+app/views/snippets/show.html.erb:2
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:02:46 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: d295df77d67ce8889165
+Version: webpack 4.44.2
+Time: 4335ms
+Built at: 12/18/2020 8:02:57 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b79338a7798a9b13703e.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-b79338a7798a9b13703e.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b79338a7798a9b13703e.js js/application-b79338a7798a9b13703e.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered snippets/show.html.erb within layouts/application (Duration: 12318.8ms | Allocations: 13034)
+Completed 500 Internal Server Error in 12504ms (ActiveRecord: 14.1ms | Allocations: 22680)
+
+
+  
+ActionView::Template::Error (Encountered error "#<ExecJS::ProgramError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.>" when prerendering snippet with {"id":4,"trigger":null,"replacement":null,"is_form":null,"is_public":null,"tags":[],"taggable_type":null,"taggable_id":null,"user_id":null,"created_at":"2020-12-18T15:55:08.614Z","updated_at":"2020-12-18T15:55:08.614Z"}
+ReactDOMServerRenderer.render (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:5195:21)
+ReactDOMServerRenderer.read (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:4852:33)
+Object.renderToString (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:5429:31)
+Object.serverRender (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:34184:42)
+eval (eval at <anonymous> (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:35825:8), <anonymous>:6:45)
+eval (eval at <anonymous> (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:35825:8), <anonymous>:18:13)
+C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:35825:8
+C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:35831:14
+C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:1:40
+Object.<anonymous> (C:\Users\alexa\AppData\Local\Temp\execjs20201218-19100-1ih0jqejs:1:58)
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:39:in `exec'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/execjs-2.7.0/lib/execjs/external_runtime.rb:21:in `eval'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering/exec_js_renderer.rb:39:in `render_from_parts'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering/exec_js_renderer.rb:20:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering/bundle_renderer.rb:40:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering.rb:27:in `block in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:63:in `block (2 levels) in with'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:62:in `handle_interrupt'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:62:in `block in with'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:59:in `handle_interrupt'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/connection_pool-2.2.3/lib/connection_pool.rb:59:in `with'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/server_rendering.rb:26:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/component_mount.rb:74:in `prerender_component'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/component_mount.rb:38:in `block in react_component'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/capture_helper.rb:45:in `block in capture'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/capture_helper.rb:209:in `with_output_buffer'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/capture_helper.rb:45:in `capture'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/helpers/tag_helper.rb:273:in `content_tag'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/component_mount.rb:57:in `react_component'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/view_helper.rb:21:in `react_component'
+C:/Users/alexa/Documents/rails-app/app/views/snippets/show.html.erb:2:in `_app_views_snippets_show_html_erb__192949841_76233300'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/base.rb:274:in `_run'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/template.rb:185:in `block in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:182:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/template.rb:385:in `instrument_render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/template.rb:183:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:58:in `block (2 levels) in render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/abstract_renderer.rb:88:in `block in instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/abstract_renderer.rb:87:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:57:in `block in render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:65:in `render_with_layout'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:56:in `render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/template_renderer.rb:13:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:117:in `block in _render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/base.rb:304:in `in_rendering_context'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:116:in `_render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/streaming.rb:218:in `_render_template'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:103:in `render_to_body'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/rendering.rb:25:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rendering.rb:36:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+C:/Ruby26-x64/lib/ruby/2.6.0/benchmark.rb:308:in `realtime'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/benchmark.rb:14:in `ms'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:43:in `render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/implicit_render.rb:35:in `default_render'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:195:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rendering.rb:30:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/react-rails-2.6.1/lib/react/rails/controller_lifecycle.rb:31:in `use_react_component_helper'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/rescue.rb:22:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:39:in `process'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:190:in `dispatch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_controller/metal.rb:254:in `dispatch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `each'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/journey/router.rb:32:in `serve'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/routing/route_set.rb:834:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:192:in `call!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:169:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:192:in `call!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/strategy.rb:169:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/omniauth-1.9.1/lib/omniauth/builder.rb:45:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/migration.rb:567:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:132:in `call_app'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:28:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:17:in `catch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-4.1.0/lib/web_console/middleware.rb:17:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:37:in `call_app'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `block in call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/rack/logger.rb:26:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/executor.rb:14:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/static.rb:126:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.0.3.4/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/webpacker-4.3.0/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.0.3.4/lib/rails/engine.rb:527:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/configuration.rb:228:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/server.rb:713:in `handle_request'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/server.rb:472:in `process_client'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/server.rb:328:in `block in run'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-4.3.7/lib/puma/thread_pool.rb:134:in `block in spawn_thread'):
+    1: <p id="notice"><%= notice %></p>
+    2: <%=react_component("snippet",@snippet.as_json,{prerender: true}) %>
+    3: <em>REACT COMPONENT RENDERED ABOVE</em>
+    4: <p>
+    5:   <strong>Trigger:</strong>
+  
+app/views/snippets/show.html.erb:2
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:03:18 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1235)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.5ms | Allocations: 3178)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<%=react_component("snippet",@snippet.as_json}) %>
+<em>REACT COMPONENT RENDERED ABOVE</em>
+<p>
+  <strong>Trigger:</strong>
+  <%= @snippet.trigger %>
+</p>
+
+<p>
+  <strong>Replacement:</strong>
+  <%= @snippet.replacement %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @snippet.is_form %>
+</p>
+
+<p>
+  <strong>Is public:</strong>
+  <%= @snippet.is_public %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @snippet.tags %>
+</p>
+
+<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+<%= link_to 'Back', snippets_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <%=react_component("snippet",@snippet.as_json}) %>
+3:    <em>REACT COMPONENT RENDERED ABOVE</em>
+4:    <p>
+5:      <strong>Trigger:</strong>
+6:      <%= @snippet.trigger %>
+7:    </p>
+8:    
+9:    <p>
+10:      <strong>Replacement:</strong>
+11:      <%= @snippet.replacement %>
+12:    </p>
+13:    
+14:    <p>
+15:      <strong>Type:</strong>
+16:      <%= @snippet.is_form %>
+17:    </p>
+18:    
+19:    <p>
+20:      <strong>Is public:</strong>
+21:      <%= @snippet.is_public %>
+22:    </p>
+23:    
+24:    <p>
+25:      <strong>Tags:</strong>
+26:      <%= @snippet.tags %>
+27:    </p>
+28:    
+29:    <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+30:    <%= link_to 'Back', snippets_path %>
+  
+app/views/snippets/show.html.erb:2: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/snippets/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/snippets/show.html.erb:2: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/snippets/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/snippets/show.html.erb:2: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/snippets/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/snippets/show.html.erb:2: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/snippets/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/snippets/show.html.erb:2: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/snippets/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/snippets/show.html.erb:2: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/snippets/show.html.erb:33: syntax error, unexpected end, expecting ')'
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:03:28 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+  Rendered snippets/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 223ms (Views: 149.5ms | ActiveRecord: 1.2ms | Allocations: 13494)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:03:42 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+  Rendered snippets/show.html.erb within layouts/application (Duration: 26.8ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 73.5ms | ActiveRecord: 1.3ms | Allocations: 6879)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:03:52 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+  Rendered snippets/show.html.erb within layouts/application (Duration: 38.2ms | Allocations: 1426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 167ms (Views: 134.6ms | ActiveRecord: 1.1ms | Allocations: 8182)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:04:16 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+  Rendered snippets/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1419)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 133ms (Views: 102.8ms | ActiveRecord: 1.1ms | Allocations: 8138)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:04:20 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+  Rendered snippets/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1178)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 74.7ms | ActiveRecord: 1.0ms | Allocations: 6865)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:04:35 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.html.erb:2
+  Rendered snippets/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 93.1ms | ActiveRecord: 1.0ms | Allocations: 6883)
+
+
+Started GET "/snippets" for ::1 at 2020-12-18 08:04:48 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1397)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 0.6ms | Allocations: 6610)
+
+
+Started GET "/snippets/4" for ::1 at 2020-12-18 08:05:18 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 79.2ms | ActiveRecord: 1.0ms | Allocations: 7173)
+
+
