@@ -1,7 +1,7 @@
 require 'yaml'
 
 snippet = {'- trigger': ":thisismysnippet",
-             'replacement': "Isnt my snippet cool?" }
+              'replacement': "Isnt my snippet cool?" }
 
   def yamlfileexport(snippet)
     File.open("test.yml","w") { |file| file.write(snippet.to_yaml) }
