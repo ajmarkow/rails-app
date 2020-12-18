@@ -13,6 +13,7 @@ end
 
 def failure
   flash[:error] = 'There was an issue signing you in. Please try again.'
+  redirect_to root_path
 end
   
 end

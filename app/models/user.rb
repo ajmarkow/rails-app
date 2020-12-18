@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable
   has_many :snippets, dependent: :destroy
   has_many :snippets_lists
+  validates :primary_snippets_list_id, numericality: { equal_to: 1}
 end
