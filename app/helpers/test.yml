@@ -1,6 +1,8 @@
 matches:
   - trigger: ":whatsup"
     replace: "not much, you?"
+  - trigger: ":whatsup"
+    replace: "not much, you?"
   - trigger: ":yo"
     form: "I chose {{choices}}"
     form_fields:
