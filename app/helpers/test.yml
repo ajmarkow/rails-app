@@ -1,20 +1,17 @@
-
-  - trigger:":AJISCOOL"
-    replace:"AJISTHECOOLEST"  - trigger:":AJISCOOL"
-    replace:"AJISTHECOOLEST"
-  - trigger:":AJISCOOL"
-    replace:"AJISTHECOOLEST"
-  - trigger:":AJISCOOL"
-    replace:"AJISTHECOOLEST"
-  - trigger:":whatsup"
-    replace:"not much, you?"
-  - trigger:":yo"
-    form:"I chose {{choices}}"
+matches:
+  - trigger: ":whatsup"
+    replace: "not much, you?"
+  - trigger: ":yo"
+    form: "I chose {{choices}}"
     form_fields:
-      choices
-       type:choice
+      choices:
+       type: choice
        values:
           - "eenie"
           - "meenie"
           - "minie"
           - "moe"
+  - trigger: ":yo"
+    form: |
+      Hi {{name}}
+#THIS IS AN AWESOME SECTION
