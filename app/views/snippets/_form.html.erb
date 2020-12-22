@@ -1,4 +1,4 @@
-<%= form_with(model: snippet, local: true) do |form| %>
+<%= form_for @snippet do |form| %>
   <% if snippet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
@@ -29,11 +29,6 @@
   <div class="field">
     <%= form.label "Is it public?" %>
     <%= form.check_box :is_public %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tags%>
-    <%= form.collection_select :slug, Tag.all, :id, :slug, prompt: true, multiple: true, class:"ui fluid dropdown" %>
   </div>
 
   <div class="actions">

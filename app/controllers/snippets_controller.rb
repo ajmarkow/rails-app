@@ -30,6 +30,7 @@ class SnippetsController < ApplicationController
       if @snippet.save
         format.html { redirect_to @snippet, notice: 'Snippet was successfully created.' }
         format.json { render :show, status: :created, location: @snippet }
+        puts @snippet
       else
         format.html { render :new }
         format.json { render json: @snippet.errors, status: :unprocessable_entity }
@@ -69,10 +70,10 @@ class SnippetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def snippet_params
-      params.require(:snippet).permit(:trigger, :replacement, :is_form, :is_public, :tags)
+      params.require(:snippet).permit(:trigger, :replacement, :is_form, :is_public, :tag)
     end
 
-    def json_repsone (object, status = :ok)
+    def json_response (object, status = :ok)
       render json: object, status: status
     end
 end

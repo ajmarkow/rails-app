@@ -9047,3 +9047,1713 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms | Allocations: 7514)
 
 
+Started GET "/snippets/1.json" for ::1 at 2020-12-22 14:54:35 -0800
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSnippet Load (4.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+Completed 404 Not Found in 85ms (ActiveRecord: 21.2ms | Allocations: 3560)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Snippet with 'id'=1):
+  
+app/controllers/snippets_controller.rb:67:in `set_snippet'
+Started GET "/" for ::1 at 2020-12-22 14:54:45 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 37.5ms | Allocations: 999)
+  Rendered layouts/_search_small.html.erb (Duration: 14.9ms | Allocations: 102)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 86.3ms | Allocations: 1660)
+Completed 200 OK in 725ms (Views: 723.6ms | ActiveRecord: 0.0ms | Allocations: 13066)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-22 14:54:50 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (3.2ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 56ms (ActiveRecord: 9.8ms | Allocations: 3147)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/" for ::1 at 2020-12-22 14:54:53 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 724)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 28.1ms | Allocations: 876)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.0ms | Allocations: 5958)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 14:54:59 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (3.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 483.8ms | Allocations: 10739)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 515.6ms | Allocations: 11090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.6ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 11.0ms | Allocations: 875)
+Completed 200 OK in 657ms (Views: 631.4ms | ActiveRecord: 9.6ms | Allocations: 24917)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 14:55:08 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"Ua63+JNV463zh3td5boRO6qm83Dm68TLghbv/r8DhpYjrRuz5S+1AzngejMDTwtAyy8S8HDganr3lOaEGjGtrg==", "snippet"=>{"trigger"=>"testing", "replacement"=>"wow it works", "is_form"=>"0", "is_public"=>"0", "slug"=>"3"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :slug[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (6.1ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 22:55:08.874458"], ["updated_at", "2020-12-22 22:55:08.874458"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/6
+Completed 302 Found in 344ms (ActiveRecord: 8.7ms | Allocations: 3299)
+
+
+Started GET "/snippets/6" for ::1 at 2020-12-22 14:55:09 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 101.3ms | Allocations: 2209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.3ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 3.5ms | Allocations: 875)
+Completed 200 OK in 176ms (Views: 151.3ms | ActiveRecord: 0.6ms | Allocations: 8899)
+
+
+Started GET "/snippets/6.json" for ::1 at 2020-12-22 14:55:15 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 12.7ms | Allocations: 192)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 97.0ms | Allocations: 2099)
+Completed 200 OK in 169ms (Views: 140.8ms | ActiveRecord: 0.9ms | Allocations: 4504)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 14:55:36 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 22.2ms | Allocations: 2318)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 2412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.8ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 4.3ms | Allocations: 874)
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.4ms | Allocations: 8445)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 14:55:47 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"xBijGFBlzRollPhlVkG6rZzhB/sGmYfiAR7BlEKt+7e2Gw9TJh+btO/z+QuwtKDW/Wjme5CSKVN0nMju55/Qjw==", "snippet"=>{"trigger"=>"ajiscool", "replacement"=>"no hes not", "is_form"=>"0", "is_public"=>"1", "slug"=>"3"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :slug[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.8ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 22:55:47.416697"], ["updated_at", "2020-12-22 22:55:47.416697"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/7
+Completed 302 Found in 96ms (ActiveRecord: 2.1ms | Allocations: 2954)
+
+
+Started GET "/snippets/7" for ::1 at 2020-12-22 14:55:47 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.2ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 24.6ms | Allocations: 875)
+Completed 200 OK in 131ms (Views: 107.9ms | ActiveRecord: 0.6ms | Allocations: 6857)
+
+
+Started GET "/snippets/7.json" for ::1 at 2020-12-22 14:55:53 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 0.8ms | Allocations: 118)
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 7], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 46.9ms | Allocations: 1208)
+Completed 200 OK in 159ms (Views: 120.3ms | ActiveRecord: 1.5ms | Allocations: 2333)
+
+
+Started GET "/snippets/6.json" for ::1 at 2020-12-22 15:02:18 -0800
+  
+NoMethodError (undefined method `const' for main:Object):
+  
+app/helpers/yamlexport_helper.rb:2:in `<main>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/snippets_controller.rb:1:in `<main>'
+Started GET "/snippets/6.json" for ::1 at 2020-12-22 15:02:54 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mSnippet Load (3.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 3.1ms | Allocations: 1200)
+  [1m[36mTag Load (2.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 14.0ms | Allocations: 2714)
+Completed 200 OK in 146ms (Views: 51.6ms | ActiveRecord: 6.3ms | Allocations: 12151)
+
+
+Started GET "/snippets/6.json" for ::1 at 2020-12-22 15:02:58 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 0.4ms | Allocations: 118)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 6], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 5.4ms | Allocations: 1208)
+Completed 200 OK in 36ms (Views: 6.4ms | ActiveRecord: 0.9ms | Allocations: 2333)
+
+
+Started GET "/snippets/5.json" for ::1 at 2020-12-22 15:03:02 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 0.4ms | Allocations: 118)
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 24.5ms | Allocations: 1208)
+Completed 200 OK in 49ms (Views: 25.4ms | ActiveRecord: 1.4ms | Allocations: 2337)
+
+
+Started GET "/snippets/4.json" for ::1 at 2020-12-22 15:03:10 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:67:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 0.6ms | Allocations: 118)
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 45.6ms | Allocations: 1208)
+Completed 200 OK in 70ms (Views: 47.1ms | ActiveRecord: 1.4ms | Allocations: 2341)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:03:21 -0800
+  
+NoMethodError (undefined method `const' for main:Object):
+  
+app/helpers/yamlexport_helper.rb:2:in `<main>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/snippets_controller.rb:1:in `<main>'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:04:29 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 62.2ms | Allocations: 7453)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 84.4ms | Allocations: 7547)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.6ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 37.1ms | Allocations: 874)
+Completed 200 OK in 270ms (Views: 188.3ms | ActiveRecord: 43.5ms | Allocations: 21930)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:04:39 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"hbbP9/a2V7as6fgFCZSvDvbHNi+GHrehydBbDojhFkP3tWO8gMwBGGaO+WvvYbV1l07XrxAVGRC8UlJ0LdM9ew==", "snippet"=>{"trigger"=>"test", "replacement"=>"aertsrwaw", "is_form"=>"0", "is_public"=>"1", "slug"=>"3"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :slug[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.1ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:04:40.102696"], ["updated_at", "2020-12-22 23:04:40.102696"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/8
+Completed 302 Found in 132ms (ActiveRecord: 3.5ms | Allocations: 3078)
+
+
+Started GET "/snippets/8" for ::1 at 2020-12-22 15:04:40 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSnippet Load (0.9ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.3ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 3.7ms | Allocations: 875)
+Completed 200 OK in 84ms (Views: 55.2ms | ActiveRecord: 0.9ms | Allocations: 7490)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:05:33 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 50.3ms | Allocations: 10453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.2ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.4ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 34.4ms | Allocations: 875)
+Completed 200 OK in 192ms (Views: 174.9ms | ActiveRecord: 9.7ms | Allocations: 17460)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:05:38 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 59.7ms | Allocations: 7002)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 78.1ms | Allocations: 7095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.8ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 4.9ms | Allocations: 874)
+Completed 200 OK in 185ms (Views: 178.2ms | ActiveRecord: 5.4ms | Allocations: 13124)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:05:51 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"WfOD9X+hvxbHdNSaypmi5ylQ8JDkLtY3VHN9VKRHoAwr8C++CdvpuA0T1fQsbLicSNkREHIleIYh8XQuAXWLNA==", "snippet"=>{"trigger"=>"test", "replacement"=>"aj is awesome", "is_form"=>"0", "is_public"=>"1", "slug"=>"3"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 903)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'slug' for Snippet.):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:06:32 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"WfOD9X+hvxbHdNSaypmi5ylQ8JDkLtY3VHN9VKRHoAwr8C++CdvpuA0T1fQsbLicSNkREHIleIYh8XQuAXWLNA==", "snippet"=>{"trigger"=>"test", "replacement"=>"aj is awesome", "is_form"=>"0", "is_public"=>"1", "slug"=>"3"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :slug[0m
+Completed 400 Bad Request in 23ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: tags):
+  
+app/controllers/snippets_controller.rb:74:in `snippet_params'
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:07:12 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 69.1ms | Allocations: 8570)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 79.0ms | Allocations: 8915)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.9ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 33.3ms | Allocations: 1603)
+Completed 200 OK in 287ms (Views: 252.0ms | ActiveRecord: 10.4ms | Allocations: 25001)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:07:22 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"/35Ou6qx2/g0Jl7Jdvqn7Lyt8lFwGi97l+Rtd4dDsXCNfeLw3MuNVv5BX6eQD72X3SQT0eYRgcriZmQNInGaSA==", "snippet"=>{"trigger"=>"ajis", "replacement"=>"awesome guy", "is_form"=>"1", "is_public"=>"0", "tags"=>"3"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 885)
+
+
+  
+NoMethodError (undefined method `each' for "3":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:07:55 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"/35Ou6qx2/g0Jl7Jdvqn7Lyt8lFwGi97l+Rtd4dDsXCNfeLw3MuNVv5BX6eQD72X3SQT0eYRgcriZmQNInGaSA==", "snippet"=>{"trigger"=>"ajis", "replacement"=>"awesome guy", "is_form"=>"1", "is_public"=>"0", "tags"=>"3"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 883)
+
+
+  
+NoMethodError (undefined method `each' for "3":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:08:31 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 32.3ms | Allocations: 3635)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 35.9ms | Allocations: 3960)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.6ms | Allocations: 5273)
+
+
+  
+ActionView::Template::Error (undefined method `tag' for #<Tag:0x000000000898f438>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :id, :tag, prompt: true, multiple: true, class:"ui fluid dropdown" %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:08:42 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 7.5ms | Allocations: 2742)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 27.3ms | Allocations: 1603)
+Completed 200 OK in 136ms (Views: 131.8ms | ActiveRecord: 0.5ms | Allocations: 11048)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:08:48 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"zVLpnxbNq9rexjJNihmwW7kSJzSVaq1TFziPEkGwPP2/UUXUYLf9dBShMyNs7Kog2JvGtANhA+JiuoZo5IIXxQ==", "snippet"=>{"trigger"=>"test", "replacement"=>"setaes", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 897)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:09:13 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"zVLpnxbNq9rexjJNihmwW7kSJzSVaq1TFziPEkGwPP2/UUXUYLf9dBShMyNs7Kog2JvGtANhA+JiuoZo5IIXxQ==", "snippet"=>{"trigger"=>"test", "replacement"=>"setaes", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 897)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:09:20 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"zVLpnxbNq9rexjJNihmwW7kSJzSVaq1TFziPEkGwPP2/UUXUYLf9dBShMyNs7Kog2JvGtANhA+JiuoZo5IIXxQ==", "snippet"=>{"trigger"=>"test", "replacement"=>"setaes", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 897)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:10:06 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 3.6ms | Allocations: 2639)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 27.7ms | Allocations: 2964)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms | Allocations: 4290)
+
+
+  
+ActionView::Template::Error (undefined method `slug' for :tags:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags.slug, Tag.all, :id, :slug, prompt: true, multiple: true, class:"ui fluid dropdown" %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:10:41 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.3ms | Allocations: 2647)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 28.3ms | Allocations: 2972)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 4298)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 5, expected 1..4)):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.select :tags, Tag.all, :id, :slug, prompt: true, multiple: true, class:"ui fluid dropdown" %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:10:50 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 29.9ms | Allocations: 2742)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 69.0ms | Allocations: 3092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 26.8ms | Allocations: 961)
+  Rendered layouts/_search_small.html.erb (Duration: 2.7ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 109.2ms | Allocations: 1606)
+Completed 200 OK in 285ms (Views: 280.1ms | ActiveRecord: 0.7ms | Allocations: 11067)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:10:59 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"wwV6SBrJjB5P8aPUc98Lav35U6vscekfVvs0/O0nRm6xBtYDbLPasIWWorqVKhERnHCyK3p6R64jeT2GSBVtVg==", "snippet"=>{"trigger"=>"test", "replacement"=>"test", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 879)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:11:24 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"wwV6SBrJjB5P8aPUc98Lav35U6vscekfVvs0/O0nRm6xBtYDbLPasIWWorqVKhERnHCyK3p6R64jeT2GSBVtVg==", "snippet"=>{"trigger"=>"test", "replacement"=>"test agan", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 879)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:12:34 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 20.9ms | Allocations: 2675)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3003)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 4311)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Class:0x000000000d93c580>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tag, Tag.id, :id, :tags, multiple: true, class:"ui fluid dropdown" %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:12:46 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.5ms | Allocations: 2670)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 29.6ms | Allocations: 2995)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms | Allocations: 4303)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Class:0x000000000d93c580>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.id, :id, :tags, multiple: true, class:"ui fluid dropdown" %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:12:52 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 6.1ms | Allocations: 2670)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 25.4ms | Allocations: 2995)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 4303)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Class:0x000000000d93c580>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.id, :id, Tag.all, multiple: true, class:"ui fluid dropdown" %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:13:04 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 9.7ms | Allocations: 2717)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 37.6ms | Allocations: 3062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 8.4ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 1.5ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 55.2ms | Allocations: 1603)
+Completed 200 OK in 216ms (Views: 211.9ms | ActiveRecord: 0.6ms | Allocations: 11017)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:13:12 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"Tu5kPD5QVvOZ1BLhqsrmog9JWqso96By9keFEATEh9U87ch3SCoAXVOzE49MP/zZbsC7K778DsODxYxqofas7Q==", "snippet"=>{"trigger"=>"test", "replacement"=>"tes", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 887)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:13:48 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.0ms | Allocations: 1838)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.4ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.9ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 40.3ms | Allocations: 1603)
+Completed 200 OK in 139ms (Views: 134.7ms | ActiveRecord: 0.0ms | Allocations: 10145)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:14:20 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.4ms | Allocations: 1930)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 28.2ms | Allocations: 2274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 2.9ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 41.1ms | Allocations: 1601)
+Completed 200 OK in 156ms (Views: 151.0ms | ActiveRecord: 0.0ms | Allocations: 10215)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:14:34 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.7ms | Allocations: 1923)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 35.2ms | Allocations: 2267)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 9.8ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 42.2ms | Allocations: 1601)
+Completed 200 OK in 215ms (Views: 210.6ms | ActiveRecord: 0.0ms | Allocations: 10212)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:14:46 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"kZ6mKjoy4to/kIuVQPc9ULK+2O8wzWisRTdKV7+dJcrjnQphTEi0dPX3ivumAicr0zc5b6bGxh0wtUMtGq8O8g==", "snippet"=>{"trigger"=>"test", "replacement"=>"testing", "is_form"=>"0", "is_public"=>"0", "tag_id"=>"whoa"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :tag_id[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.4ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:14:46.371600"], ["updated_at", "2020-12-22 23:14:46.371600"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/9
+Completed 302 Found in 111ms (ActiveRecord: 3.1ms | Allocations: 3102)
+
+
+Started GET "/snippets/9" for ::1 at 2020-12-22 15:14:46 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.2ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 19.8ms | Allocations: 875)
+Completed 200 OK in 110ms (Views: 85.5ms | ActiveRecord: 0.6ms | Allocations: 7383)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:15:24 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.9ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 91.5ms | Allocations: 10618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.5ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 56.2ms | Allocations: 875)
+Completed 200 OK in 500ms (Views: 483.5ms | ActiveRecord: 8.6ms | Allocations: 17636)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:15:28 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 8.1ms | Allocations: 1509)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 51.4ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.7ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 31.8ms | Allocations: 874)
+Completed 200 OK in 216ms (Views: 214.4ms | ActiveRecord: 0.0ms | Allocations: 7627)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:15:33 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"FUlWdu8MuS4q8Q7i1jzNI8drrZKAtC46cOWpuBqHQ8FjykYs+LC8LOBeD2cl6NnBhyWCcZwS7mip8p1CzIVmJw==", "snippet"=>{"trigger"=>"ahey", "replacement"=>"he cool", "is_form"=>"0", "is_public"=>"0", "tag_id"=>""}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :tag_id[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.7ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:15:33.914922"], ["updated_at", "2020-12-22 23:15:33.914922"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/10
+Completed 302 Found in 77ms (ActiveRecord: 3.3ms | Allocations: 3115)
+
+
+Started GET "/snippets/10" for ::1 at 2020-12-22 15:15:34 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSnippet Load (0.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.4ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 17.7ms | Allocations: 875)
+Completed 200 OK in 85ms (Views: 64.3ms | ActiveRecord: 0.4ms | Allocations: 6969)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:16:05 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 10472)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.6ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 7.3ms | Allocations: 875)
+Completed 200 OK in 198ms (Views: 184.5ms | ActiveRecord: 8.3ms | Allocations: 17365)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:16:07 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 4.5ms | Allocations: 1509)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 16.2ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 120.1ms | Allocations: 874)
+Completed 200 OK in 288ms (Views: 285.3ms | ActiveRecord: 0.0ms | Allocations: 7628)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:16:10 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"X9yJN2aXvFGRS/6syCVke+HXtEOsNVLN7We3wivZIUMpX5ltcSu5U1vk/yk78XCZoZmboLCTkp80cIM4/dsEpQ==", "snippet"=>{"trigger"=>"a", "replacement"=>"b", "is_form"=>"0", "is_public"=>"0", "tag_id"=>""}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 939)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'tag_id' for Snippet.):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:16:58 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"34YE+mwDJ+Rr7dXOIi5D71DMKvpmrsVjpXd9j+bvrnithaixGnlxSqGK1KDE21mUMUXLevCla9LQ9XT1Q92FQA==", "snippet"=>{"trigger"=>"a", "replacement"=>"b", "is_form"=>"0", "is_public"=>"0", "tag_id"=>""}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :tag_id[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.8ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:16:59.404136"], ["updated_at", "2020-12-22 23:16:59.404136"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/11
+Completed 302 Found in 215ms (ActiveRecord: 12.3ms | Allocations: 11389)
+
+
+Started GET "/snippets/11" for ::1 at 2020-12-22 15:16:59 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSnippet Load (1.3ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 1.0ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 75.0ms | Allocations: 1604)
+Completed 200 OK in 235ms (Views: 205.5ms | ActiveRecord: 1.3ms | Allocations: 10063)
+
+
+Started GET "/snippets/11.json" for ::1 at 2020-12-22 15:17:23 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mSnippet Load (0.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 1.0ms | Allocations: 189)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 11], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 11.3ms | Allocations: 2118)
+Completed 200 OK in 36ms (Views: 28.0ms | ActiveRecord: 2.6ms | Allocations: 4538)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:18:55 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 4.4ms | Allocations: 2634)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 2959)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms | Allocations: 4270)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 4..6)):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:19:23 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 73.4ms | Allocations: 7880)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 78.8ms | Allocations: 8205)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 4.1ms | Allocations: 9523)
+
+
+  
+ActionView::Template::Error (undefined method `tag_id' for #<Tag:0x000000000da27df0>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :id, :tag_id, multiple: true %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:19:33 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 8.7ms | Allocations: 2648)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 35.1ms | Allocations: 2973)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms | Allocations: 4289)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :tag:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :id, :tag.id, multiple: true %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:19:46 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 7.8ms | Allocations: 2711)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 3056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.0ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 17.9ms | Allocations: 1608)
+Completed 200 OK in 133ms (Views: 129.1ms | ActiveRecord: 0.5ms | Allocations: 11026)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:20:00 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 28.8ms | Allocations: 2717)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 3062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.6ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 1.2ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 33.1ms | Allocations: 1601)
+Completed 200 OK in 138ms (Views: 133.5ms | ActiveRecord: 1.2ms | Allocations: 11013)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:20:04 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 54.0ms | Allocations: 2306)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 75.1ms | Allocations: 2400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.4ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 22.5ms | Allocations: 875)
+Completed 200 OK in 200ms (Views: 197.3ms | ActiveRecord: 1.1ms | Allocations: 8441)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:20:17 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 39.6ms | Allocations: 2715)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 45.2ms | Allocations: 3059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 6.2ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 31.0ms | Allocations: 1601)
+Completed 200 OK in 160ms (Views: 155.9ms | ActiveRecord: 0.7ms | Allocations: 11012)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:20:36 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"WAhltQIRW1S3eg3dFdrtVDg7N2+5Bpgk/HTviQvDRgcqC8n+dGsN+n0dDLPzL/cvWbLW7y8NNpWJ9ubzrvFtPw==", "snippet"=>{"trigger"=>"test", "replacement"=>"set", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.6ms | Allocations: 9829)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:21:48 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"WAhltQIRW1S3eg3dFdrtVDg7N2+5Bpgk/HTviQvDRgcqC8n+dGsN+n0dDLPzL/cvWbLW7y8NNpWJ9ubzrvFtPw==", "snippet"=>{"trigger"=>"test", "replacement"=>"set", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 901)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:21:52 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.4ms | Allocations: 2743)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3068)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 4393)
+
+
+  
+ActionView::Template::Error (undefined method `to_i' for :id:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :id.to_i, :slug, multiple: true %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:22:05 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 91.6ms | Allocations: 7413)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 152.9ms | Allocations: 7758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 14.6ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 1.0ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 36.9ms | Allocations: 1603)
+Completed 200 OK in 485ms (Views: 474.1ms | ActiveRecord: 8.1ms | Allocations: 15735)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:22:14 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"iaUtp7GVY+uRtMFkJRxWESLQN/LoFxH4tt6fbTG4DDz7poHsx+81RVvTwArD6UxqQ1nWcn4cv0nDXJYXlIonBA==", "snippet"=>{"trigger"=>"asdf", "replacement"=>"asdfdef", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 887)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets" for ::1 at 2020-12-22 15:24:07 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 32.4ms | Allocations: 2461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.6ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 22.5ms | Allocations: 1604)
+Completed 200 OK in 138ms (Views: 134.0ms | ActiveRecord: 0.7ms | Allocations: 10440)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:24:11 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 9.6ms | Allocations: 2651)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 33.5ms | Allocations: 2976)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms | Allocations: 3589)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, Array.new(:id), :slug, multiple: true %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36:in `initialize'
+app/views/snippets/_form.html.erb:36:in `new'
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:26:04 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 35.8ms | Allocations: 2714)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 52.5ms | Allocations: 3059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.4ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.8ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 30.2ms | Allocations: 1603)
+Completed 200 OK in 147ms (Views: 142.9ms | ActiveRecord: 0.5ms | Allocations: 11020)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:26:10 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"AZJ/uluIxFpzsz4AudAcPiWAX0b1+Z7YFGNm5LWUnH1zkdPxLfKS9LnUP25fJQZFRAm+xmPyMGlh4W+eEKa3RQ==", "snippet"=>{"trigger"=>"test", "replacement"=>"ae", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 885)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:26:20 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"AZJ/uluIxFpzsz4AudAcPiWAX0b1+Z7YFGNm5LWUnH1zkdPxLfKS9LnUP25fJQZFRAm+xmPyMGlh4W+eEKa3RQ==", "snippet"=>{"trigger"=>"test", "replacement"=>"ae", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 885)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:26:25 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 18.9ms | Allocations: 3625)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 34.0ms | Allocations: 3955)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.6ms | Allocations: 5264)
+
+
+  
+ActionView::Template::Error (undefined method `tags' for #<Tag:0x0000000009338e80>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :tags, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:26:33 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 48.1ms | Allocations: 2708)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 55.4ms | Allocations: 3053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 50.3ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 1.2ms | Allocations: 104)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 90.0ms | Allocations: 1608)
+Completed 200 OK in 325ms (Views: 314.9ms | ActiveRecord: 0.7ms | Allocations: 11023)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:26:39 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"Oh+J4/SPpxe+qu6S01WncJ9UvxvgeqhbfTsnolbb52RIHCWogvXxuXTN7/w1oL0L/t1em3ZxBuoIuS7Y8+nMXA==", "snippet"=>{"trigger"=>"test", "replacement"=>"set", "is_form"=>"0", "is_public"=>"0", "tags"=>"Github"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 899)
+
+
+  
+NoMethodError (undefined method `each' for "Github":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started GET "/snippets" for ::1 at 2020-12-22 15:28:28 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.9ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 85.3ms | Allocations: 2450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.2ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.8ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 20.4ms | Allocations: 1604)
+Completed 200 OK in 240ms (Views: 234.9ms | ActiveRecord: 0.9ms | Allocations: 10414)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:28:32 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 17.4ms | Allocations: 2648)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 51.0ms | Allocations: 2973)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms | Allocations: 3586)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :tag:Symbol):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :tag.id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:28:39 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 38.3ms | Allocations: 3625)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 49.2ms | Allocations: 3950)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 1.1ms | Allocations: 5264)
+
+
+  
+ActionView::Template::Error (undefined method `tag_id' for #<Tag:0x000000000b2e83e8>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tags, Tag.all, :tag_id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:28:51 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 15.6ms | Allocations: 2714)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 34.5ms | Allocations: 3059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 11.5ms | Allocations: 1603)
+Completed 200 OK in 152ms (Views: 147.1ms | ActiveRecord: 0.6ms | Allocations: 11019)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:28:58 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"ToJj+Glru3hVKCGmmMa02G1PAbKz6WuBfuWhjnsMC1g8gc+zHxHt1p9PIMh+M66jDMbgMiXixTALZ6j03j4gYA==", "snippet"=>{"trigger"=>"test", "replacement"=>"aetaw", "is_form"=>"0", "is_public"=>"0", "tags"=>"1"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 899)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6302314972764189855)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddTagIDtoSnippets (20201222233214)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.7ms)[0m  [1m[35mALTER TABLE "snippets" ADD "tag_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201222233214"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6302314972764189855)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/snippets" for ::1 at 2020-12-22 15:33:59 -0800
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (3.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 54.8ms | Allocations: 13794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.6ms | Allocations: 997)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 14.3ms | Allocations: 1663)
+Completed 200 OK in 201ms (Views: 173.8ms | ActiveRecord: 13.3ms | Allocations: 28731)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:34:03 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (3.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 43.2ms | Allocations: 10038)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 49.7ms | Allocations: 10388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.6ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 1.6ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 36.3ms | Allocations: 874)
+Completed 200 OK in 160ms (Views: 147.7ms | ActiveRecord: 9.6ms | Allocations: 16576)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:34:08 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"NYeeTFtFy6pIdQno6vR9qv7Dx+AaJ5oApzFTDWiJNtlDBI4WTPnOqILaCG0ZIGlIvo3oAwaBWlJ+Jmf3vosTPw==", "snippet"=>{"trigger"=>"test", "replacement"=>"test", "is_form"=>"0", "is_public"=>"0", "tags"=>"Github"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 950)
+
+
+  
+NoMethodError (undefined method `each' for "Github":String):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:34:30 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"NYeeTFtFy6pIdQno6vR9qv7Dx+AaJ5oApzFTDWiJNtlDBI4WTPnOqILaCG0ZIGlIvo3oAwaBWlJ+Jmf3vosTPw==", "snippet"=>{"trigger"=>"test", "replacement"=>"test", "is_form"=>"0", "is_public"=>"0", "tags"=>"Github"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :tags[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.5ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:34:30.821909"], ["updated_at", "2020-12-22 23:34:30.821909"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/12
+Completed 302 Found in 119ms (ActiveRecord: 11.8ms | Allocations: 12290)
+
+
+Started GET "/snippets/12" for ::1 at 2020-12-22 15:34:31 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.0ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 17.6ms | Allocations: 875)
+Completed 200 OK in 123ms (Views: 110.8ms | ActiveRecord: 1.1ms | Allocations: 8783)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:34:37 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.1ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 2334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 6.2ms | Allocations: 875)
+Completed 200 OK in 352ms (Views: 349.0ms | ActiveRecord: 1.1ms | Allocations: 8366)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:34:53 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 7.2ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 20.2ms | Allocations: 1604)
+Completed 200 OK in 171ms (Views: 165.1ms | ActiveRecord: 1.2ms | Allocations: 10600)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:34:56 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 66.2ms | Allocations: 7417)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 79.2ms | Allocations: 7762)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 22.3ms | Allocations: 874)
+Completed 200 OK in 217ms (Views: 203.1ms | ActiveRecord: 8.4ms | Allocations: 13925)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:35:02 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"nZNhsFGGvOtdtAKESW8IjofKoQ+n/Vgck+GZ3Sr2HaHrEHHqRjq56ZcbAwG6uxxsx4SO7LtbmE5K9q0n/PQ4Rw==", "snippet"=>{"trigger"=>"t", "replacement"=>"asdf", "is_form"=>"0", "is_public"=>"0", "tag"=>"Github"}, "commit"=>"Create Snippet"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 936)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'tag' for Snippet.):
+  
+app/controllers/snippets_controller.rb:27:in `create'
+Started POST "/snippets" for ::1 at 2020-12-22 15:35:31 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"nZNhsFGGvOtdtAKESW8IjofKoQ+n/Vgck+GZ3Sr2HaHrEHHqRjq56ZcbAwG6uxxsx4SO7LtbmE5K9q0n/PQ4Rw==", "snippet"=>{"trigger"=>"t", "replacement"=>"asdf", "is_form"=>"0", "is_public"=>"0", "tag"=>"Github"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :tag[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.6ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:35:32.384864"], ["updated_at", "2020-12-22 23:35:32.384864"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/13
+Completed 302 Found in 97ms (ActiveRecord: 9.6ms | Allocations: 12114)
+
+
+Started GET "/snippets/13" for ::1 at 2020-12-22 15:35:32 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 15.6ms | Allocations: 1609)
+Completed 200 OK in 154ms (Views: 126.8ms | ActiveRecord: 1.0ms | Allocations: 10074)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:35:37 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 2777)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 9.1ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 56.3ms | Allocations: 875)
+Completed 200 OK in 205ms (Views: 201.1ms | ActiveRecord: 0.8ms | Allocations: 8935)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:35:39 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 56.6ms | Allocations: 8338)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 74.3ms | Allocations: 8663)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 11.5ms | Allocations: 9273)
+
+
+  
+ActionView::Template::Error (undefined method `tag_id' for #<Tag:0x000000000a44b4c0>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tag, Tag.all, :tag_id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:35:48 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 51.7ms | Allocations: 3602)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 56.1ms | Allocations: 3927)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.7ms | Allocations: 5238)
+
+
+  
+ActionView::Template::Error (undefined method `tags_id' for #<Tag:0x000000000b2318a0>):
+    33: 
+    34:   <div class="field">
+    35:     <%= form.label :tags%>
+    36:     <%= form.collection_select :tag, Tag.all, :tags_id, :slug %>
+    37:   </div>
+    38: 
+    39:   <div class="actions">
+  
+app/views/snippets/_form.html.erb:36
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:35:58 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 44.8ms | Allocations: 2691)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 67.4ms | Allocations: 3036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.7ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 1.8ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 41.2ms | Allocations: 1603)
+Completed 200 OK in 213ms (Views: 206.8ms | ActiveRecord: 1.7ms | Allocations: 10993)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:36:05 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"U5OhzlKF7awNOD1x4I0IfTlW9BHmk/ZIbhSByeOZMO0hkA2FJP+7AsdfPB8GeBIGWN8VkXCYWPkbloizRqsb1Q==", "snippet"=>{"trigger"=>"test", "replacement"=>"test", "is_form"=>"0", "is_public"=>"0", "tag"=>"1"}, "commit"=>"Create Snippet"}
+[31mUnpermitted parameter: :tag[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.6ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:36:05.600076"], ["updated_at", "2020-12-22 23:36:05.600076"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/14
+Completed 302 Found in 82ms (ActiveRecord: 1.7ms | Allocations: 2961)
+
+
+Started GET "/snippets/14" for ::1 at 2020-12-22 15:36:05 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.8ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 14.9ms | Allocations: 875)
+Completed 200 OK in 86ms (Views: 62.9ms | ActiveRecord: 0.5ms | Allocations: 7251)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:36:08 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 2939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.5ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 14.4ms | Allocations: 875)
+Completed 200 OK in 118ms (Views: 114.0ms | ActiveRecord: 0.8ms | Allocations: 9093)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:38:26 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 5.9ms | Allocations: 1584)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 28.8ms | Allocations: 1928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 9.2ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 22.2ms | Allocations: 1601)
+Completed 200 OK in 157ms (Views: 154.2ms | ActiveRecord: 0.0ms | Allocations: 9876)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:38:31 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"3TINENdc0nHh7h2tHkyYCZb1FMlS/XEs2O/Ny9TCoH6rsR1KwODXcytBHCjtmIzr1rs7Kk5bsX4B+PkxAsCFmA==", "snippet"=>{"trigger"=>"ab", "replacement"=>"cda", "is_form"=>"0", "is_public"=>"0"}, "commit"=>"Create Snippet"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.6ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:38:31.354183"], ["updated_at", "2020-12-22 23:38:31.354183"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/15
+Completed 302 Found in 30ms (ActiveRecord: 1.4ms | Allocations: 2958)
+
+
+Started GET "/snippets/15" for ::1 at 2020-12-22 15:38:31 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.3ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 3.5ms | Allocations: 875)
+Completed 200 OK in 70ms (Views: 49.8ms | ActiveRecord: 0.5ms | Allocations: 7257)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:38:33 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 3098)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.7ms | Allocations: 724)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 8.3ms | Allocations: 876)
+Completed 200 OK in 120ms (Views: 116.0ms | ActiveRecord: 0.8ms | Allocations: 9260)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:42:42 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 8.6ms | Allocations: 1641)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 42.5ms | Allocations: 1990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.3ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 1.8ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 79.4ms | Allocations: 1603)
+Completed 200 OK in 248ms (Views: 205.3ms | ActiveRecord: 8.4ms | Allocations: 18792)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:42:47 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"8psLEpuMmWMDosjG12oE+oPlcq8bBaqdgQn37pE45ESAmKdZ7fbPzcnFyagxnx6B4myTL40OBCz0i/6UNArPfA==", "snippet"=>{"trigger"=>"test", "replacement"=>"test", "is_form"=>"0", "is_public"=>"0"}, "commit"=>"Create Snippet"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.9ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:42:47.248237"], ["updated_at", "2020-12-22 23:42:47.248237"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/16
+Completed 302 Found in 131ms (ActiveRecord: 3.2ms | Allocations: 3055)
+
+
+Started GET "/snippets/16" for ::1 at 2020-12-22 15:42:47 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.5ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 6.2ms | Allocations: 875)
+Completed 200 OK in 141ms (Views: 83.3ms | ActiveRecord: 0.7ms | Allocations: 8257)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:43:22 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.1ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 77.7ms | Allocations: 12407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 6.1ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 46.5ms | Allocations: 875)
+Completed 200 OK in 231ms (Views: 194.8ms | ActiveRecord: 15.4ms | Allocations: 19435)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:43:26 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 2.5ms | Allocations: 1201)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.8ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 4.4ms | Allocations: 874)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.0ms | Allocations: 7322)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:43:29 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"aEtS0PMvpuggHKYB+YfwELNmdanXUA5AILJtLh0gvaYeyEKK5JOj6uqzp4QKU+Ty8yhaSsv2zhL5pVnUyyKYQA==", "snippet"=>{"trigger"=>"aets", "replacement"=>"asettw", "is_form"=>"0", "is_public"=>"0"}, "commit"=>"Create Snippet"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.6ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:43:29.334447"], ["updated_at", "2020-12-22 23:43:29.334447"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/17
+Completed 302 Found in 30ms (ActiveRecord: 1.4ms | Allocations: 3074)
+
+
+Started GET "/snippets/17" for ::1 at 2020-12-22 15:43:29 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.3ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 3.6ms | Allocations: 875)
+Completed 200 OK in 102ms (Views: 69.4ms | ActiveRecord: 0.6ms | Allocations: 6960)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:45:23 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 66.6ms | Allocations: 12278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 34.9ms | Allocations: 875)
+Completed 200 OK in 323ms (Views: 284.4ms | ActiveRecord: 13.9ms | Allocations: 19240)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:45:27 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 4.0ms | Allocations: 1201)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 29.0ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.8ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 27.4ms | Allocations: 874)
+Completed 200 OK in 163ms (Views: 161.9ms | ActiveRecord: 0.0ms | Allocations: 7323)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:45:31 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"/wHrW608NSHE01lIBHWJ+sgXQxFjdwzOuhwf1Is2yiiJgvsBuoAwIw58WM33oZ0YiFls8n/RzJxjCysuXTTvzg==", "snippet"=>{"trigger"=>"a", "replacement"=>"b", "is_form"=>"0", "is_public"=>"0"}, "commit"=>"Create Snippet"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (0.6ms)[0m  [1m[32mINSERT INTO "snippets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-12-22 23:45:31.381910"], ["updated_at", "2020-12-22 23:45:31.381910"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/18
+Completed 302 Found in 70ms (ActiveRecord: 1.8ms | Allocations: 3043)
+
+
+Started GET "/snippets/18" for ::1 at 2020-12-22 15:45:31 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.5ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 4.0ms | Allocations: 875)
+Completed 200 OK in 106ms (Views: 70.9ms | ActiveRecord: 0.5ms | Allocations: 6945)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:46:25 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 12507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.7ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 25.7ms | Allocations: 875)
+Completed 200 OK in 185ms (Views: 144.9ms | ActiveRecord: 10.2ms | Allocations: 19414)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:46:28 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 4.2ms | Allocations: 1201)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 34.7ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 722)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 29.1ms | Allocations: 874)
+Completed 200 OK in 169ms (Views: 167.8ms | ActiveRecord: 0.0ms | Allocations: 7323)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 15:46:31 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"wPNTYf8SIfygCCYy3NRmHk28JygdRM/6F4x8HLJ4DXq2cEM76K4k/mqnJ7cvAHL8DfIIywHiD6jOm0jmZHoonA==", "snippet"=>{"trigger"=>"test", "replacement"=>"etesat", "is_form"=>"0", "is_public"=>"0"}, "commit"=>"Create Snippet"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (1.4ms)[0m  [1m[32mINSERT INTO "snippets" ("trigger", "replacement", "is_form", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["trigger", "test"], ["replacement", "etesat"], ["is_form", false], ["is_public", false], ["created_at", "2020-12-22 23:46:31.697172"], ["updated_at", "2020-12-22 23:46:31.697172"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/19
+Completed 302 Found in 90ms (ActiveRecord: 3.3ms | Allocations: 3142)
+
+
+Started GET "/snippets/19" for ::1 at 2020-12-22 15:46:32 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mSnippet Load (0.3ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 31.1ms | Allocations: 875)
+Completed 200 OK in 104ms (Views: 76.0ms | ActiveRecord: 0.3ms | Allocations: 6991)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 15:46:35 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.1ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 3528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.4ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 33.9ms | Allocations: 876)
+Completed 200 OK in 246ms (Views: 243.6ms | ActiveRecord: 1.1ms | Allocations: 9545)
+
+
+Started GET "/snippets/19" for ::1 at 2020-12-22 15:46:47 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 724)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 40.6ms | Allocations: 876)
+Completed 200 OK in 124ms (Views: 103.4ms | ActiveRecord: 0.5ms | Allocations: 6856)
+
+
+Started GET "/snippets/19.json" for ::1 at 2020-12-22 15:46:50 -0800
+Processing by SnippetsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.json.jbuilder
+  Rendered snippets/_snippet.json.jbuilder (Duration: 1.6ms | Allocations: 198)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."taggable_id" = $1 AND "tags"."taggable_type" = $2[0m  [["taggable_id", 19], ["taggable_type", "Snippet"]]
+  ↳ app/views/snippets/show.json.jbuilder:3
+  Rendered snippets/show.json.jbuilder (Duration: 42.3ms | Allocations: 2559)
+Completed 200 OK in 93ms (Views: 66.0ms | ActiveRecord: 5.0ms | Allocations: 4965)
+
+
