@@ -2,7 +2,8 @@
 <html>
   <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>    
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
@@ -19,9 +20,12 @@
         <div class="ui fluid raised card">
           <div class="content">
             <h1>Welcome to Semplificato</h1>
+            <p>     Espanso is an awesome open source text expander written in rust. Thanks to <a href='https://github.com/federico-terzi'>Federico Terzi</a> for writing the awesome tool that inspired me to build this project.  This tool works hand in hand with Espanso, which takes .yaml files as config. Install the gem 'snippet_cli' and you can load any snippet from this site into your Espanso configuration quickly.  You can read more about Espanso at <a href='http://espanso.org'>espanso.org</a></p>
+            <%= image_tag('unsplash-typewriter.jpg', height:'500px',class: "main-image") %>
             <p>     Semplificato is a hub to share snippets.  A snippet is a phrase your computer expands after you type it.  Snippets are great to make coding quicker, or just to spend fewer keystrokes typing phrases you commonly use.</p>
             <blockquote>
-              <h4>Take the web address of any URL on the site and feed it into our companion applicaton, Snippet CLI and it will add it to your Espanso configuration.</h4>
+              <h4>Take the web address of any URL on the site and feed it into our companion application, Snippet CLI, just type <em>snippet_cli new</em> and follow the prompts 
+                   it will add it to your Espanso configuration.</h4>
             </blockquote>
           </div>
         </div>
