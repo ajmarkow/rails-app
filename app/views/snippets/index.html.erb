@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script type='text/javascript'>
+  new ClipboardJS('.snippetid')
+</script>
 <p id="notice"><%= notice %></p>
   <div class='ui grid'>
 
@@ -31,7 +33,7 @@
       <tr>
         <td><%= snippet.trigger %></td>
         <td><%= snippet.replacement %></td>
-        <td><button class='ui secondary button' onclick="idToClipboard(<%= snippet.id %>)">Copy ID</button></td>
+        <td><input class='ui input' id='snippetid' placeholder='<%= snippet.id %>'</input><button data-clipboard-target='snippetid'class='ui secondary button'>Copy ID</button></td>
         <td><%= snippet.is_form %></td>
         <td><%= snippet.tags %></td>
         <td><%= link_to 'See Details', snippet %></td>

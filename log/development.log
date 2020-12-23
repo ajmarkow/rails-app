@@ -16714,3 +16714,487 @@ Processing by SnippetsController#index as HTML
 Completed 200 OK in 123ms (Views: 118.7ms | ActiveRecord: 0.8ms | Allocations: 9445)
 
 
+Started GET "/snippets" for ::1 at 2020-12-22 20:45:33 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 9.7ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 5.5ms | Allocations: 753)
+  [1m[36mSnippet Load (6.1ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 46.8ms | Allocations: 3507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119ms (Views: 109.3ms | ActiveRecord: 6.1ms | Allocations: 9548)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:45:45 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 10.6ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 4.8ms | Allocations: 643)
+  [1m[36mSnippet Load (2.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 84.5ms | Allocations: 2501)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 171ms (Views: 165.8ms | ActiveRecord: 2.0ms | Allocations: 7502)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:46:01 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 10.5ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 14.9ms | Allocations: 753)
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 93.4ms | Allocations: 3403)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 203ms (Views: 194.4ms | ActiveRecord: 0.7ms | Allocations: 9440)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:47:20 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.4ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 7.6ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:32
+  Rendered snippets/index.html.erb within layouts/application (Duration: 44.7ms | Allocations: 3407)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 172ms (Views: 166.0ms | ActiveRecord: 0.8ms | Allocations: 9440)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:50:02 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered snippets/index.html.erb within layouts/application (Duration: 115.3ms | Allocations: 1347)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms | Allocations: 2685)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script type='text/javascript'>
+  
+</script>
+<p id="notice"><%= notice %></p>
+  <div class='ui grid'>
+
+      <div class='four wide column'>
+        <%= render "layouts/sidenav"%>
+        <%= render "layouts/signin"%>
+      </div>
+
+
+      </div>
+                      <div class='twelve wide column'>
+        <div class="ui fluid raised card">
+          <table class='ui striped table'>
+  <thead>
+  <h1>Snippets</h1>
+    <tr>
+      <th>Trigger</th>
+      <th>Replacement</th>
+      <th>ID (Click to Copy)</th>
+      <th>Is Form</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @snippets.each do |snippet| %>
+      <tr>
+        <td><%= snippet.trigger %></td>
+        <td><%= snippet.replacement %></td>
+        <td><input id='snippetid" value='<%= snippet.id =>'<button data-clipboard-target='snippetid'class='ui secondary button'>Copy ID</button></td>
+        <td><%= snippet.is_form %></td>
+        <td><%= snippet.tags %></td>
+        <td><%= link_to 'See Details', snippet %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+        </div>
+      </div>
+    </div>
+  </div>
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+3:    <script type='text/javascript'>
+4:      
+5:    </script>
+6:    <p id="notice"><%= notice %></p>
+7:      <div class='ui grid'>
+8:    
+9:          <div class='four wide column'>
+10:            <%= render "layouts/sidenav"%>
+11:            <%= render "layouts/signin"%>
+12:          </div>
+13:    
+14:    
+15:          </div>
+16:                          <div class='twelve wide column'>
+17:            <div class="ui fluid raised card">
+18:              <table class='ui striped table'>
+19:      <thead>
+20:      <h1>Snippets</h1>
+21:        <tr>
+22:          <th>Trigger</th>
+23:          <th>Replacement</th>
+24:          <th>ID (Click to Copy)</th>
+25:          <th>Is Form</th>
+26:          <th>Tags</th>
+27:          <th colspan="3"></th>
+28:        </tr>
+29:      </thead>
+30:    
+31:      <tbody>
+32:        <% @snippets.each do |snippet| %>
+33:          <tr>
+34:            <td><%= snippet.trigger %></td>
+35:            <td><%= snippet.replacement %></td>
+36:            <td><input id='snippetid" value='<%= snippet.id =>'<button data-clipboard-target='snippetid'class='ui secondary button'>Copy ID</button></td>
+37:            <td><%= snippet.is_form %></td>
+38:            <td><%= snippet.tags %></td>
+39:            <td><%= link_to 'See Details', snippet %></td>
+40:          </tr>
+41:        <% end %>
+42:      </tbody>
+43:    </table>
+44:            </div>
+45:          </div>
+46:        </div>
+47:      </div>
+  
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/snippets" for ::1 at 2020-12-22 20:50:28 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered snippets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1318)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 2656)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+<script type='text/javascript'>
+  
+</script>
+<p id="notice"><%= notice %></p>
+  <div class='ui grid'>
+
+      <div class='four wide column'>
+        <%= render "layouts/sidenav"%>
+        <%= render "layouts/signin"%>
+      </div>
+
+
+      </div>
+                      <div class='twelve wide column'>
+        <div class="ui fluid raised card">
+          <table class='ui striped table'>
+  <thead>
+  <h1>Snippets</h1>
+    <tr>
+      <th>Trigger</th>
+      <th>Replacement</th>
+      <th>ID (Click to Copy)</th>
+      <th>Is Form</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @snippets.each do |snippet| %>
+      <tr>
+        <td><%= snippet.trigger %></td>
+        <td><%= snippet.replacement %></td>
+        <td><input id='snippetid" placeholder='#{<%= snippet.id =>}'<button data-clipboard-target='snippetid'class='ui secondary button'>Copy ID</button></td>
+        <td><%= snippet.is_form %></td>
+        <td><%= snippet.tags %></td>
+        <td><%= link_to 'See Details', snippet %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+        </div>
+      </div>
+    </div>
+  </div>
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+3:    <script type='text/javascript'>
+4:      
+5:    </script>
+6:    <p id="notice"><%= notice %></p>
+7:      <div class='ui grid'>
+8:    
+9:          <div class='four wide column'>
+10:            <%= render "layouts/sidenav"%>
+11:            <%= render "layouts/signin"%>
+12:          </div>
+13:    
+14:    
+15:          </div>
+16:                          <div class='twelve wide column'>
+17:            <div class="ui fluid raised card">
+18:              <table class='ui striped table'>
+19:      <thead>
+20:      <h1>Snippets</h1>
+21:        <tr>
+22:          <th>Trigger</th>
+23:          <th>Replacement</th>
+24:          <th>ID (Click to Copy)</th>
+25:          <th>Is Form</th>
+26:          <th>Tags</th>
+27:          <th colspan="3"></th>
+28:        </tr>
+29:      </thead>
+30:    
+31:      <tbody>
+32:        <% @snippets.each do |snippet| %>
+33:          <tr>
+34:            <td><%= snippet.trigger %></td>
+35:            <td><%= snippet.replacement %></td>
+36:            <td><input id='snippetid" placeholder='#{<%= snippet.id =>}'<button data-clipboard-target='snippetid'class='ui secondary button'>Copy ID</button></td>
+37:            <td><%= snippet.is_form %></td>
+38:            <td><%= snippet.tags %></td>
+39:            <td><%= link_to 'See Details', snippet %></td>
+40:          </tr>
+41:        <% end %>
+42:      </tbody>
+43:    </table>
+44:            </div>
+45:          </div>
+46:        </div>
+47:      </div>
+  
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected =>, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/snippets/index.html.erb:38: unknown regexp options - td
+app/views/snippets/index.html.erb:39: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:39: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/snippets/index.html.erb:40: unknown regexp options - tr
+app/views/snippets/index.html.erb:43: unknown regexp options - tabl
+app/views/snippets/index.html.erb:44: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:45: unknown regexp options - dv
+app/views/snippets/index.html.erb:46: syntax error, unexpected '<'
+app/views/snippets/index.html.erb:47: unknown regexp options - dv
+app/views/snippets/index.html.erb:49: unterminated string meets end of file
+app/views/snippets/index.html.erb:49: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/snippets" for ::1 at 2020-12-22 20:50:46 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.1ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:32
+  Rendered snippets/index.html.erb within layouts/application (Duration: 50.9ms | Allocations: 3422)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 134ms (Views: 130.6ms | ActiveRecord: 0.8ms | Allocations: 9461)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:51:29 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.6ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 4.7ms | Allocations: 753)
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:32
+  Rendered snippets/index.html.erb within layouts/application (Duration: 59.8ms | Allocations: 3413)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 178ms (Views: 173.2ms | ActiveRecord: 1.0ms | Allocations: 9453)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:51:59 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.9ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 753)
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:32
+  Rendered snippets/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 3420)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 97.6ms | ActiveRecord: 1.0ms | Allocations: 9473)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:52:10 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.7ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 4.2ms | Allocations: 753)
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:32
+  Rendered snippets/index.html.erb within layouts/application (Duration: 57.0ms | Allocations: 3415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 142.2ms | ActiveRecord: 1.0ms | Allocations: 9448)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:53:24 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.5ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.2ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:32
+  Rendered snippets/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 3417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 117ms (Views: 112.9ms | ActiveRecord: 0.8ms | Allocations: 9449)
+
+
