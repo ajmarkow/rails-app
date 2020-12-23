@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :snippets_lists
   resources :snippets
   root to: 'home#index'
+  get 'snippets/main', to: 'snippets#main'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

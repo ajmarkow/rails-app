@@ -21,8 +21,7 @@
     <tr>
       <th>Trigger</th>
       <th>Replacement</th>
-      <th>ID (Click to Copy)</th>
-      <th>Is Form</th>
+      <th>ID</th>
       <th>Tags</th>
       <th colspan="3"></th>
     </tr>
@@ -33,9 +32,10 @@
       <tr>
         <td><%= snippet.trigger %></td>
         <td><%= snippet.replacement %></td>
-        <td><input class='ui input' id='snippetid' placeholder='<%= snippet.id %>'</input><button data-clipboard-target='snippetid'class='ui secondary button'>Copy ID</button></td>
-        <td><%= snippet.is_form %></td>
-        <td><%= snippet.tags %></td>
+        <td><%= snippet.id%></td>
+        <td><% @tags.each do |tag| %></td>
+          <td> <%=tag.slug%></td>
+        <% end %>
         <td><%= link_to 'See Details', snippet %></td>
       </tr>
     <% end %>

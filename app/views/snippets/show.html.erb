@@ -15,33 +15,44 @@
             <div class="ui list">
               <div class="item">
                 <div class="content">
-                  <p>Trigger: <div class="ui horizontal divider"></div><%= @snippet.trigger %></p>
+                  <h2>Trigger:</h2><br>
+                  <h1>:<%= @snippet.trigger %></h1>
                 </div>
               </div>
+              <div class="ui horizontal divider"></div>
               <div class="item">
                 <div class="content">
-                  <p>Replaced with: 
-                  <div class="ui horizontal divider"></div>
-                  <%= @snippet.replacement %></p>
+                  <p>Replaced with:</p> 
+                  <h2><%= @snippet.replacement %></h2>
                 </div>
               </div>
+              <div class="ui horizontal divider"></div>
               <div class="item">
                 <div class="content">
-                <p>Is it a form?
+                <p>Is it a form?</p><h2>
+                <%= @snippet.is_form %></h2>
+                </div>
+              </div>
+              <div class="ui horizontal divider"></div>
+              <div class="item">
+                <div class="content">
+                <p>Is it public?</p>
                 <div class="ui horizontal divider"></div>
-                <%= @snippet.is_form %></p>
+                <h2><%= @snippet.is_public %></h2>
                 </div>
               </div>
+              <div class="ui horizontal divider"></div>
               <div class="item">
                 <div class="content">
-                <p>Is it public?
-                <div class="ui horizontal divider"></div>
-                <%= @snippet.is_public %></p>
-                </div>
-              </div>
-              <div class="item">
-                <div class="content">
-                 <p>Tags: <div class="ui horizontal divider"></div><%= @snippet.tags %></p>
+                 <p>Tags: <div class="ui horizontal divider"></div>
+                 <% if @tags != nil %>  
+                   <% @tags.each do |tag| %>
+                   <%= tag.slug %>
+                 <% end %>
+                 <%else %>
+                  <em><p>No tags for this snippet.</p></em>
+                <% end %>
+                 </p>
                 </div>
               </div>
             </div>

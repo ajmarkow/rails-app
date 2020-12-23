@@ -1,9 +1,11 @@
 class SnippetsController < ApplicationController
   before_action :set_snippet, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :only => [:main]
 
   # GET /snippets
   # GET /snippets.json
   def index
+    @tags = Tag.all
     @snippets = Snippet.it_aint_private
   end
 
@@ -15,6 +17,10 @@ class SnippetsController < ApplicationController
   # GET /snippets/new
   def new
     @snippet = Snippet.new
+  end
+
+  def main
+    @snippet = Snippet.find_by_user_id(params[:user_id])
   end
 
   # GET /snippets/1/edit

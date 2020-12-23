@@ -19,6 +19,9 @@ body {
   font-family: "Fira Code", monospace;
   background-color: #fff8e7;
 }
+h2{
+   font-family: "Fira Code", monospace; 
+}
 
 .horizontal.divider {
   margin-top: 3%;
