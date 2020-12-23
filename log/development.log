@@ -10757,3 +10757,1656 @@ Processing by SnippetsController#show as JSON
 Completed 200 OK in 93ms (Views: 66.0ms | ActiveRecord: 5.0ms | Allocations: 4965)
 
 
+Started GET "/snippets/" for ::1 at 2020-12-22 15:47:39 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 6.6ms | Allocations: 875)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.5ms | Allocations: 9561)
+
+
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (280.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_app_development"[0m
+  [1m[35m (265.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_app_test"[0m
+  [1m[35m (1560.4ms)[0m  [1m[35mCREATE DATABASE "rails_app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1181.9ms)[0m  [1m[35mCREATE DATABASE "rails_app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "snippets" CASCADE[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCREATE TABLE "snippets" ("id" bigserial primary key, "trigger" text, "replacement" text, "is_form" boolean, "is_public" boolean, "tags" text, "taggable_type" character varying, "taggable_id" bigint, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "tag_id" integer)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_on_taggable_type_and_taggable_id" ON "snippets"  ("taggable_type", "taggable_id")[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_on_user_id" ON "snippets"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "snippets_lists" CASCADE[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "snippets_lists" ("id" bigserial primary key, "is_public" boolean, "tags" text, "taggable_type" character varying, "taggable_id" bigint, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_lists_on_taggable_type_and_taggable_id" ON "snippets_lists"  ("taggable_type", "taggable_id")[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_lists_on_user_id" ON "snippets_lists"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "slug" text, "is_public" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "taggable_type" character varying, "taggable_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "primary_snippets_list_id" bigint)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (13.4ms)[0m  [1m[35mALTER TABLE "snippets" ADD CONSTRAINT "fk_rails_77e256d035"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "snippets_lists" ADD CONSTRAINT "fk_rails_c2928bf121"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201222233214)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201216212348),
+(20201216213457),
+(20201216232658),
+(20201216233000),
+(20201217002704),
+(20201217220137),
+(20201218171731);
+
+[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-22 23:49:12.777275"], ["updated_at", "2020-12-22 23:49:12.777275"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5e20614f2084a3e62eb6a6f8db4f1b9fb8dc57ab"], ["created_at", "2020-12-22 23:49:12.789790"], ["updated_at", "2020-12-22 23:49:12.789790"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "snippets" CASCADE[0m
+  [1m[35m (37.4ms)[0m  [1m[35mCREATE TABLE "snippets" ("id" bigserial primary key, "trigger" text, "replacement" text, "is_form" boolean, "is_public" boolean, "tags" text, "taggable_type" character varying, "taggable_id" bigint, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "tag_id" integer)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_on_taggable_type_and_taggable_id" ON "snippets"  ("taggable_type", "taggable_id")[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_on_user_id" ON "snippets"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "snippets_lists" CASCADE[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "snippets_lists" ("id" bigserial primary key, "is_public" boolean, "tags" text, "taggable_type" character varying, "taggable_id" bigint, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_lists_on_taggable_type_and_taggable_id" ON "snippets_lists"  ("taggable_type", "taggable_id")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE  INDEX  "index_snippets_lists_on_user_id" ON "snippets_lists"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "slug" text, "is_public" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "taggable_type" character varying, "taggable_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "provider" character varying, "uid" character varying, "primary_snippets_list_id" bigint)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (12.0ms)[0m  [1m[35mALTER TABLE "snippets" ADD CONSTRAINT "fk_rails_77e256d035"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mALTER TABLE "snippets_lists" ADD CONSTRAINT "fk_rails_c2928bf121"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201222233214)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201216212348),
+(20201216213457),
+(20201216232658),
+(20201216233000),
+(20201217002704),
+(20201217220137),
+(20201218171731);
+
+[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-22 23:49:13.141649"], ["updated_at", "2020-12-22 23:49:13.141649"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-12-22 23:49:13.152681"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5e20614f2084a3e62eb6a6f8db4f1b9fb8dc57ab"], ["created_at", "2020-12-22 23:49:13.178197"], ["updated_at", "2020-12-22 23:49:13.178197"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/snippets/" for ::1 at 2020-12-22 15:58:59 -0800
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (4.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 2076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 6.3ms | Allocations: 996)
+  Rendered layouts/_search_small.html.erb (Duration: 0.7ms | Allocations: 102)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 20.4ms | Allocations: 1657)
+Completed 200 OK in 179ms (Views: 158.2ms | ActiveRecord: 8.9ms | Allocations: 17062)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:59:02 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 3.4ms | Allocations: 1836)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2171)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 15.6ms | Allocations: 10654)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @snippet do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+    <div class="field">
+    <%= form.label :tags
+    <%= form.collection_select :tag, Tag.all, :id, :slug %>
+  </div> %>
+
+  <div class="field">
+    <%= form.label "Is it a form?" %>
+    <%= form.check_box :is_form %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Is it public?" %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_for @snippet do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:        <div class="field">
+25:        <%= form.label :tags
+26:        <%= form.collection_select :tag, Tag.all, :id, :slug %>
+27:      </div> %>
+28:    
+29:      <div class="field">
+30:        <%= form.label "Is it a form?" %>
+31:        <%= form.check_box :is_form %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label "Is it public?" %>
+36:        <%= form.check_box :is_public %>
+37:      </div>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:59:29 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 1.7ms | Allocations: 1517)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1842)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 3157)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_for @snippet do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags
+    <%= form.collection_select :tags, Tag.all, :id, :slug %>
+  </div> %>
+
+  <div class="field">
+    <%= form.label "Is it a form?" %>
+    <%= form.check_box :is_form %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Is it public?" %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_for @snippet do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label :tags
+26:        <%= form.collection_select :tags, Tag.all, :id, :slug %>
+27:      </div> %>
+28:    
+29:      <div class="field">
+30:        <%= form.label "Is it a form?" %>
+31:        <%= form.check_box :is_form %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label "Is it public?" %>
+36:        <%= form.check_box :is_public %>
+37:      </div>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:26: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:59:47 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered snippets/_form.html.erb (Duration: 4.5ms | Allocations: 1517)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1847)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms | Allocations: 3161)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: snippet, local: true) do |form| %>
+  <% if snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+
+      <ul>
+        <% snippet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :trigger %>
+    <%= form.text_area :trigger %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement %>
+    <%= form.text_area :replacement %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Is it a form?" %>
+    <%= form.check_box :is_form %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Is it public?" %>
+    <%= form.check_box :is_public %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags
+    <%= form.collection_select :tag, Tag.all, :id, :slug %>
+  </div> %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: snippet, local: true) do |form| %>
+2:      <% if snippet.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% snippet.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :trigger %>
+16:        <%= form.text_area :trigger %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :replacement %>
+21:        <%= form.text_area :replacement %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label "Is it a form?" %>
+26:        <%= form.check_box :is_form %>
+27:      </div>
+28:    
+29:      <div class="field">
+30:        <%= form.label "Is it public?" %>
+31:        <%= form.check_box :is_public %>
+32:      </div>
+33:    
+34:      <div class="field">
+35:        <%= form.label :tags
+36:        <%= form.collection_select :tag, Tag.all, :id, :slug %>
+37:      </div> %>
+38:    
+39:      <div class="actions">
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/snippets/_form.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/snippets/_form.html.erb:42: syntax error, unexpected end, expecting ')'
+app/views/snippets/_form.html.erb:44: syntax error, unexpected end, expecting ')'
+app/views/snippets/new.html.erb:3
+Started GET "/snippets/new" for ::1 at 2020-12-22 15:59:56 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (2.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 145.2ms | Allocations: 10153)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 168.5ms | Allocations: 10499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 958)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 17.7ms | Allocations: 1603)
+Completed 200 OK in 277ms (Views: 269.4ms | ActiveRecord: 4.8ms | Allocations: 18360)
+
+
+Started POST "/snippets" for ::1 at 2020-12-22 16:00:07 -0800
+Processing by SnippetsController#create as HTML
+  Parameters: {"authenticity_token"=>"nSToNuoVsNIW89ei4d7Op7s4NOM+jkq1uaCJbk101OvvJ0R9nG/mfNyU1swHK9Tc2rHVY6iF5ATMIoAU6Eb/0w==", "snippet"=>{"trigger"=>"test", "replacement"=>"a", "is_form"=>"0", "is_public"=>"0"}, "commit"=>"Create Snippet"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[36mSnippet Create (4.0ms)[0m  [1m[32mINSERT INTO "snippets" ("trigger", "replacement", "is_form", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["trigger", "test"], ["replacement", "a"], ["is_form", false], ["is_public", false], ["created_at", "2020-12-23 00:00:07.249119"], ["updated_at", "2020-12-23 00:00:07.249119"]]
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/snippets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/snippets/1
+Completed 302 Found in 130ms (ActiveRecord: 6.7ms | Allocations: 3325)
+
+
+Started GET "/snippets/1" for ::1 at 2020-12-22 16:00:07 -0800
+Processing by SnippetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSnippet Load (0.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE "snippets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_controller.rb:68:in `set_snippet'
+  Rendering snippets/show.html.erb within layouts/application
+  Rendered snippets/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 5.4ms | Allocations: 875)
+Completed 200 OK in 146ms (Views: 95.9ms | ActiveRecord: 0.8ms | Allocations: 9371)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:00:26 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.9ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 17.7ms | Allocations: 875)
+Completed 200 OK in 124ms (Views: 118.9ms | ActiveRecord: 0.7ms | Allocations: 7354)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:01:34 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.9ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 13.7ms | Allocations: 1604)
+Completed 200 OK in 96ms (Views: 92.1ms | ActiveRecord: 0.7ms | Allocations: 9149)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:01:38 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 895)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.9ms | Allocations: 724)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 6.0ms | Allocations: 876)
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.6ms | Allocations: 6914)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:00:49 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (1.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 6.1ms | Allocations: 875)
+Completed 200 OK in 120ms (Views: 116.1ms | ActiveRecord: 1.0ms | Allocations: 6912)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:00:53 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.4ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 16.8ms | Allocations: 875)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.6ms | Allocations: 6908)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:01:22 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.4ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.5ms | Allocations: 723)
+  Rendered layouts/_search_small.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 3.7ms | Allocations: 875)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.4ms | Allocations: 6908)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 16:02:04 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets"[0m
+  ↳ app/views/snippets/index.html.erb:18
+  Rendered snippets/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.0ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 8.5ms | Allocations: 1602)
+Completed 200 OK in 87ms (Views: 83.3ms | ActiveRecord: 0.5ms | Allocations: 9124)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:02:10 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.2ms | Allocations: 724)
+  Rendered layouts/_search_small.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 13.6ms | Allocations: 876)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.0ms | Allocations: 6318)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:02:32 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 959)
+  Rendered layouts/_search_small.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered layouts/partials/_persistentnav.html.erb (Duration: 14.2ms | Allocations: 1604)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.0ms | Allocations: 7580)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:02:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms | Allocations: 7000)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/partials/_sidenav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alexa/Documents/rails-app/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.3/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.4/app/views"
+):
+    15: 
+    16:     <div class="ui grid ">
+    17:              <div class='row'>     
+    18:                 <div class='four wide column'><%= render "layouts/partials/sidenav"%></div> 
+    19:                 <div class='twelve wide column'> <%= yield %></div>
+    20:              </div>    
+    21:               
+  
+app/views/layouts/application.html.erb:18
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-12-22 16:03:11 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 959)
+Completed 200 OK in 110ms (Views: 108.4ms | ActiveRecord: 0.0ms | Allocations: 6932)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:04:00 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 90)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.0ms | Allocations: 5761)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:06:14 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1577)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 2441)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/partials/_sidenav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alexa/Documents/rails-app/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.3/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.4/app/views"
+):
+    4:   </head>
+    5:   <body>
+    6:   <div class='four wide column'>
+    7:   <%= render "layouts/partials/sidenav"%>
+    8:   </div>
+    9:   <div class='twelve wide column'>
+   10:     <div class="ui raised card">
+  
+app/views/home/index.html.erb:7
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-12-22 16:06:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.9ms | Allocations: 1067)
+  Rendered home/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 1406)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 132ms (Views: 131.3ms | ActiveRecord: 0.0ms | Allocations: 6970)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:06:55 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 11.5ms | Allocations: 1066)
+  Rendered home/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 1404)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.0ms | Allocations: 6945)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:07:24 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 44.1ms | Allocations: 1066)
+  Rendered home/index.html.erb within layouts/application (Duration: 58.2ms | Allocations: 1410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 188ms (Views: 186.6ms | ActiveRecord: 0.0ms | Allocations: 6955)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:07:43 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.9ms | Allocations: 1066)
+  Rendered home/index.html.erb within layouts/application (Duration: 24.4ms | Allocations: 1415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 117.0ms | ActiveRecord: 0.0ms | Allocations: 6956)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:08:32 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 51.6ms | Allocations: 5925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 112.6ms | ActiveRecord: 0.0ms | Allocations: 9966)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:08:35 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 8.9ms | Allocations: 724)
+  Rendered home/index.html.erb within layouts/application (Duration: 97.1ms | Allocations: 5359)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 155ms (Views: 153.4ms | ActiveRecord: 0.0ms | Allocations: 8746)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:09:26 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.6ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 72.4ms | Allocations: 5921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 176ms (Views: 174.8ms | ActiveRecord: 0.0ms | Allocations: 9965)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:09:37 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 725)
+  Rendered home/index.html.erb within layouts/application (Duration: 77.0ms | Allocations: 5360)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 133ms (Views: 131.8ms | ActiveRecord: 0.0ms | Allocations: 8757)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:11:40 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 55.9ms | Allocations: 5928)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 140.1ms | ActiveRecord: 0.0ms | Allocations: 9966)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:12:51 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.5ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 61.3ms | Allocations: 5922)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 121.7ms | ActiveRecord: 0.0ms | Allocations: 9958)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:13:18 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 22.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 120.6ms | Allocations: 5923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 208ms (Views: 207.0ms | ActiveRecord: 0.0ms | Allocations: 9959)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:13:48 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 55.6ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 126.6ms | ActiveRecord: 0.0ms | Allocations: 9952)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:14:11 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 68.1ms | Allocations: 5930)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 154ms (Views: 152.9ms | ActiveRecord: 0.0ms | Allocations: 9974)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:14:32 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 75.7ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 151ms (Views: 149.7ms | ActiveRecord: 0.0ms | Allocations: 9972)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:14:50 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 8.6ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 92.8ms | Allocations: 5925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 171.4ms | ActiveRecord: 0.0ms | Allocations: 9963)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:15:46 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 6.2ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 73.2ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 142ms (Views: 140.7ms | ActiveRecord: 0.0ms | Allocations: 9970)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:16:03 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 965)
+  Rendered home/index.html.erb within layouts/application (Duration: 117.6ms | Allocations: 5932)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 189ms (Views: 187.5ms | ActiveRecord: 0.0ms | Allocations: 9972)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:16:25 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 54.2ms | Allocations: 5926)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 108.9ms | ActiveRecord: 0.0ms | Allocations: 9970)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:16:40 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.4ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 53.3ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.0ms | Allocations: 9970)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:17:22 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 57.7ms | Allocations: 5921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.0ms | Allocations: 9963)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:17:29 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 13.7ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 116.6ms | Allocations: 5922)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 203ms (Views: 201.1ms | ActiveRecord: 0.0ms | Allocations: 9966)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:17:44 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 77.4ms | Allocations: 5923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 161ms (Views: 160.2ms | ActiveRecord: 0.0ms | Allocations: 9973)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:17:55 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 56.5ms | Allocations: 5923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 109.5ms | ActiveRecord: 0.0ms | Allocations: 9964)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:19:04 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 59.7ms | Allocations: 6038)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119ms (Views: 118.6ms | ActiveRecord: 0.0ms | Allocations: 10082)
+
+
+Started GET "/images/avatar/small/elliot.jpg" for ::1 at 2020-12-22 16:19:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/avatar/small/elliot.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/images/avatar/small/helen.jpg" for ::1 at 2020-12-22 16:19:05 -0800
+Started GET "/images/wireframe/image.png" for ::1 at 2020-12-22 16:19:05 -0800
+Started GET "/images/avatar/small/jenny.jpg" for ::1 at 2020-12-22 16:19:06 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/avatar/small/helen.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/wireframe/image.png"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/images/avatar/small/joe.jpg" for ::1 at 2020-12-22 16:19:06 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/avatar/small/jenny.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/images/avatar/small/joe.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/images/avatar/small/justen.jpg" for ::1 at 2020-12-22 16:19:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/images/avatar/small/justen.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-22 16:20:49 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 64.9ms | Allocations: 5925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 130ms (Views: 129.0ms | ActiveRecord: 0.0ms | Allocations: 9969)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:20:58 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 49.2ms | Allocations: 5923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms | Allocations: 9969)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:21:21 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 68.6ms | Allocations: 5923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 147ms (Views: 145.9ms | ActiveRecord: 0.0ms | Allocations: 9971)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:22:16 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 53.4ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 108.9ms | ActiveRecord: 0.0ms | Allocations: 9976)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:23:01 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.1ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 136ms (Views: 133.8ms | ActiveRecord: 0.0ms | Allocations: 9972)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:23:32 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 56.8ms | Allocations: 5924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 122.9ms | ActiveRecord: 0.0ms | Allocations: 9970)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:25:43 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 6.8ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 835.7ms | Allocations: 18167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 940ms (Views: 939.2ms | ActiveRecord: 0.0ms | Allocations: 22211)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:26:17 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.3ms | Allocations: 724)
+  Rendered home/index.html.erb within layouts/application (Duration: 320.2ms | Allocations: 15117)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 460ms (Views: 458.7ms | ActiveRecord: 0.0ms | Allocations: 18521)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:26:31 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.1ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 394.2ms | Allocations: 14648)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 470ms (Views: 469.0ms | ActiveRecord: 0.0ms | Allocations: 18052)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:26:40 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.9ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 382.6ms | Allocations: 15120)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 545ms (Views: 544.2ms | ActiveRecord: 0.0ms | Allocations: 18523)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:27:09 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.5ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 309.0ms | Allocations: 14639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 388ms (Views: 386.6ms | ActiveRecord: 0.0ms | Allocations: 18031)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:27:25 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.6ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 725.4ms | Allocations: 14202)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 833ms (Views: 832.1ms | ActiveRecord: 0.0ms | Allocations: 17586)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:27:36 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.5ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 581.0ms | Allocations: 14670)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 732ms (Views: 731.0ms | ActiveRecord: 0.0ms | Allocations: 18066)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:27:59 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 341.5ms | Allocations: 14217)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 493ms (Views: 490.9ms | ActiveRecord: 0.0ms | Allocations: 17597)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:28:50 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.8ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 387.3ms | Allocations: 13724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 476ms (Views: 474.6ms | ActiveRecord: 0.0ms | Allocations: 17116)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:28:57 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 10.7ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 407.0ms | Allocations: 14617)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 495ms (Views: 494.2ms | ActiveRecord: 0.0ms | Allocations: 18003)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:29:35 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.2ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 351.4ms | Allocations: 14671)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 474ms (Views: 473.0ms | ActiveRecord: 0.0ms | Allocations: 18067)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:29:45 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.1ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 440.9ms | Allocations: 14195)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 520ms (Views: 518.6ms | ActiveRecord: 0.0ms | Allocations: 17581)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:29:51 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.6ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 95.6ms | Allocations: 5358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 184ms (Views: 182.4ms | ActiveRecord: 0.0ms | Allocations: 8750)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:30:44 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.5ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 82.6ms | Allocations: 5358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 169ms (Views: 168.0ms | ActiveRecord: 0.0ms | Allocations: 8754)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:31:05 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 402.9ms | Allocations: 15621)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 515ms (Views: 513.7ms | ActiveRecord: 0.0ms | Allocations: 19013)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:31:17 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.5ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 258.9ms | Allocations: 15155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 330ms (Views: 328.7ms | ActiveRecord: 0.0ms | Allocations: 18557)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:31:36 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 275.1ms | Allocations: 16055)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 376ms (Views: 374.5ms | ActiveRecord: 0.0ms | Allocations: 19455)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:32:00 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 324.3ms | Allocations: 14725)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 390ms (Views: 388.9ms | ActiveRecord: 0.0ms | Allocations: 18111)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:32:39 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 437.9ms | Allocations: 15163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 541ms (Views: 540.5ms | ActiveRecord: 0.0ms | Allocations: 18560)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:33:14 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.4ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 304.2ms | Allocations: 14650)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 383ms (Views: 381.5ms | ActiveRecord: 0.0ms | Allocations: 18046)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:33:23 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 305.2ms | Allocations: 15581)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 372ms (Views: 371.4ms | ActiveRecord: 0.0ms | Allocations: 18975)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:33:39 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 277.3ms | Allocations: 14647)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 324ms (Views: 323.6ms | ActiveRecord: 0.0ms | Allocations: 18033)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:33:54 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 5.9ms | Allocations: 723)
+  Rendered home/index.html.erb within layouts/application (Duration: 346.9ms | Allocations: 16562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 514ms (Views: 511.7ms | ActiveRecord: 0.0ms | Allocations: 19946)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:34:44 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.9ms | Allocations: 959)
+  Rendered home/index.html.erb within layouts/application (Duration: 80.3ms | Allocations: 7271)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms | Allocations: 8127)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/partials/_signin with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alexa/Documents/rails-app/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/devise-4.7.3/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actiontext-6.0.3.4/app/views"
+  * "C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionmailbox-6.0.3.4/app/views"
+):
+    10: 
+    11:       <div class='four wide column'>
+    12:         <%= render "layouts/sidenav"%>
+    13:         <%= render "layouts/partials/signin"%>
+    14:       </div>
+    15: 
+    16: 
+  
+app/views/home/index.html.erb:13
+app/controllers/home_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2020-12-22 16:34:56 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 6.6ms | Allocations: 959)
+  Rendered layouts/_signin.html.erb (Duration: 35.9ms | Allocations: 771)
+  Rendered home/index.html.erb within layouts/application (Duration: 198.8ms | Allocations: 6932)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 270ms (Views: 267.3ms | ActiveRecord: 0.0ms | Allocations: 10977)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-22 16:35:19 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (4.1ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 66ms (ActiveRecord: 37.1ms | Allocations: 3259)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/" for ::1 at 2020-12-22 16:35:28 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.9ms | Allocations: 724)
+  Rendered layouts/_signin.html.erb (Duration: 2.5ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 72.3ms | Allocations: 6071)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 142ms (Views: 141.4ms | ActiveRecord: 0.0ms | Allocations: 9456)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:35:51 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.5ms | Allocations: 916)
+  Rendered layouts/_signin.html.erb (Duration: 4.2ms | Allocations: 757)
+  Rendered home/index.html.erb within layouts/application (Duration: 80.3ms | Allocations: 6868)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 139.7ms | ActiveRecord: 0.0ms | Allocations: 10922)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:37:17 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 711)
+  Rendered layouts/_signin.html.erb (Duration: 9.5ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 411.5ms | Allocations: 15896)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 518ms (Views: 516.3ms | ActiveRecord: 0.0ms | Allocations: 19307)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:37:37 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.5ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 2.5ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 285.7ms | Allocations: 16270)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 334ms (Views: 332.8ms | ActiveRecord: 0.0ms | Allocations: 19654)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:38:29 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 915)
+  Rendered layouts/_signin.html.erb (Duration: 4.5ms | Allocations: 751)
+  Rendered home/index.html.erb within layouts/application (Duration: 81.7ms | Allocations: 6861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 170ms (Views: 168.6ms | ActiveRecord: 0.0ms | Allocations: 10909)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:38:35 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.3ms | Allocations: 711)
+  Rendered layouts/_signin.html.erb (Duration: 5.0ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 94.9ms | Allocations: 6057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 168ms (Views: 167.1ms | ActiveRecord: 0.0ms | Allocations: 9452)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:38:38 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.5ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 2.2ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 57.0ms | Allocations: 6056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 145.5ms | ActiveRecord: 0.0ms | Allocations: 9452)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:40:47 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.1ms | Allocations: 915)
+  Rendered layouts/_signin.html.erb (Duration: 3.6ms | Allocations: 751)
+  Rendered home/index.html.erb within layouts/application (Duration: 72.3ms | Allocations: 6871)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 139ms (Views: 138.4ms | ActiveRecord: 0.0ms | Allocations: 10913)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:42:01 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.3ms | Allocations: 711)
+  Rendered layouts/_signin.html.erb (Duration: 3.2ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 197.9ms | Allocations: 14884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 347ms (Views: 345.5ms | ActiveRecord: 0.0ms | Allocations: 18269)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:42:17 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.0ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 4.6ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 105.6ms | Allocations: 6056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 197ms (Views: 195.6ms | ActiveRecord: 0.0ms | Allocations: 9440)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:42:38 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.3ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 2.1ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 52.4ms | Allocations: 6056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 101.2ms | ActiveRecord: 0.0ms | Allocations: 9446)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:43:05 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.5ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 2.8ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 220.5ms | Allocations: 16342)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 261ms (Views: 260.5ms | ActiveRecord: 0.0ms | Allocations: 19732)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:43:13 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.2ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 2.7ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 57.6ms | Allocations: 6057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.0ms | Allocations: 9445)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:43:22 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 2.9ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 3.8ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 78.7ms | Allocations: 6057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 139.7ms | ActiveRecord: 0.0ms | Allocations: 9457)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:43:33 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.2ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 4.6ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 82.5ms | Allocations: 6056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 145ms (Views: 143.5ms | ActiveRecord: 0.0ms | Allocations: 9444)
+
+
+Started GET "/" for ::1 at 2020-12-22 16:43:37 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 4.7ms | Allocations: 710)
+  Rendered layouts/_signin.html.erb (Duration: 2.6ms | Allocations: 641)
+  Rendered home/index.html.erb within layouts/application (Duration: 61.8ms | Allocations: 6056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 0.0ms | Allocations: 9450)
+
+

@@ -12,11 +12,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
-    <div class="ui grid ">
-          <%= render "layouts/partials/persistentnav"%>            
-              <div class='twelve wide column'><%= yield %></div>    
-      </div>
-    </div>
+ <%= yield %> 
   </body>
 </html>

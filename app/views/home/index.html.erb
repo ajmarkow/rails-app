@@ -1,12 +1,33 @@
  <!DOCTYPE html>
 <html>
   <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <div class="ui raised card">
-      <div class="content">
-        <h1>TESTING</h1>
+  <div class='ui grid'>
+
+      <div class='four wide column'>
+        <%= render "layouts/sidenav"%>
+        <%= render "layouts/signin"%>
       </div>
+
+
+      </div>
+                      <div class='twelve wide column'>
+        <div class="ui fluid raised card">
+          <div class="content">
+            <h1>Welcome to Semplificato</h1>
+            <p>     Semplificato is a hub to share snippets.  A snippet is a phrase your computer expands after you type it.  Snippets are great to make coding quicker, or just to spend fewer keystrokes typing phrases you commonly use.</p>
+            <blockquote>
+              <h4>Take the web address of any URL on the site and feed it into our companion applicaton, Snippet CLI and it will add it to your Espanso configuration.</h4>
+            </blockquote>
+          </div>
+        </div>
     </div>
+  </div>
+
+
 </body>
 </html>
