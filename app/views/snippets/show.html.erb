@@ -1,32 +1,54 @@
 <p id="notice"><%= notice %></p>
-<%=react_component("Snippet",{trigger:"hi",replacement:"how are you"}) %>
-<em>REACT COMPONENT RENDERED ABOVE</em>
-<br>
-<br>
-<p>
-  <strong>Trigger:</strong>
-  <%= @snippet.trigger %>
-</p>
+  <div class='ui grid'>
 
-<p>
-  <strong>Replacement:</strong>
-  <%= @snippet.replacement %>
-</p>
+      <div class='four wide column'>
+        <%= render "layouts/sidenav"%>
+        <%= render "layouts/signin"%>
+      </div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @snippet.is_form %>
-</p>
 
-<p>
-  <strong>Is public:</strong>
-  <%= @snippet.is_public %>
-</p>
+      </div>
+                      <div class='twelve wide column'>
+        <div class="ui fluid raised card">
+          <div class="content">
 
-<p>
-  <strong>Tags:</strong>
-  <%= @snippet.tags %>
-</p>
-
-<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
-<%= link_to 'Back', snippets_path %>
+            <div class="ui list">
+              <div class="item">
+                <div class="content">
+                  <p>Trigger: <div class="ui horizontal divider"></div><%= @snippet.trigger %></p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                  <p>Replaced with: 
+                  <div class="ui horizontal divider"></div>
+                  <%= @snippet.replacement %></p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                <p>Is it a form?
+                <div class="ui horizontal divider"></div>
+                <%= @snippet.is_form %></p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                <p>Is it public?
+                <div class="ui horizontal divider"></div>
+                <%= @snippet.is_public %></p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="content">
+                 <p>Tags: <div class="ui horizontal divider"></div><%= @snippet.tags %></p>
+                </div>
+              </div>
+            </div>
+          <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+            <%= link_to 'Back', snippets_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

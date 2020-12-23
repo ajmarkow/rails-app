@@ -4,7 +4,7 @@ class SnippetsController < ApplicationController
   # GET /snippets
   # GET /snippets.json
   def index
-    @snippets = Snippet.all
+    @snippets = Snippet.it_aint_private
   end
 
   # GET /snippets/1

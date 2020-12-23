@@ -1,8 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Snippets</h1>
+<p id="notice"><%= notice %></p>
+  <div class='ui grid'>
 
-<table>
+      <div class='four wide column'>
+        <%= render "layouts/sidenav"%>
+        <%= render "layouts/signin"%>
+      </div>
+
+
+      </div>
+                      <div class='twelve wide column'>
+        <div class="ui fluid raised card">
+          <table class='ui striped table'>
   <thead>
     <tr>
       <th>Trigger</th>
@@ -29,6 +40,13 @@
     <% end %>
   </tbody>
 </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 <br>
 
