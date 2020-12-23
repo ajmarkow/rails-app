@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :tags
+  
   devise_for :users, :controllers => {omniauth_callbacks: 'users/omniauth'}
     devise_scope :user do
       get 'users/sign_in', to: 'users/sessions#new'

@@ -3,7 +3,6 @@
 
       <div class='four wide column'>
         <%= render "layouts/sidenav"%>
-        <%= render "layouts/signin"%>
       </div>
 
 
@@ -47,7 +46,7 @@
                  <p>Tags: <div class="ui horizontal divider"></div>
                  <% if @tags != nil %>  
                    <% @tags.each do |tag| %>
-                   <%= tag.slug %>
+                  <p> <%= tag.id %></p>
                  <% end %>
                  <%else %>
                   <em><p>No tags for this snippet.</p></em>

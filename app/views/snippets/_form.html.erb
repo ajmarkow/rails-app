@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :tags%>
-    <%= form.collection_select :tag, Tag.all, :tags_id, :slug %>
+    <%= form.collection_select :tag, Tag.all, :id, :slug %>
   </div>
 
   <div class="actions">

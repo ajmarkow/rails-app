@@ -5,18 +5,25 @@ class SnippetsController < ApplicationController
   # GET /snippets
   # GET /snippets.json
   def index
-    @tags = Tag.all
+    @tags= Tag.where("snippet_id =?",params[:id].to_i)
+
     @snippets = Snippet.it_aint_private
   end
 
   # GET /snippets/1
   # GET /snippets/1.json
   def show
+    @snippet=Snippet.find_by_id(params[:id])
+    @tags= Tag.where("snippet_id = :query",query:params[:id])
   end
 
   # GET /snippets/new
   def new
     @snippet = Snippet.new
+    @tag = Tag.new
+    @tag.snipppet = params[:user_id]
+    @tag.tag_id = params[:tag_id]
+    @tag.save
   end
 
   def main
@@ -76,7 +83,7 @@ class SnippetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def snippet_params
-      params.require(:snippet).permit(:trigger, :replacement, :is_form, :is_public, :tag)
+      params.require(:snippet).permit(:trigger, :replacement, :is_form, :is_public, :tag_id)
     end
 
     def json_response (object, status = :ok)
