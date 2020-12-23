@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Snippets</h1>
+
 <p id="notice"><%= notice %></p>
   <div class='ui grid'>
 
@@ -15,11 +15,12 @@
         <div class="ui fluid raised card">
           <table class='ui striped table'>
   <thead>
+  <h1>Snippets</h1>
     <tr>
       <th>Trigger</th>
       <th>Replacement</th>
+      <th>ID (Click to Copy)</th>
       <th>Is Form</th>
-      <th>Is public</th>
       <th>Tags</th>
       <th colspan="3"></th>
     </tr>
@@ -30,12 +31,10 @@
       <tr>
         <td><%= snippet.trigger %></td>
         <td><%= snippet.replacement %></td>
+        <td><button class='ui secondary button' onclick="idToClipboard(<%= snippet.id %>)">Copy ID</button></td>
         <td><%= snippet.is_form %></td>
-        <td><%= snippet.is_public %></td>
         <td><%= snippet.tags %></td>
-        <td><%= link_to 'Show', snippet %></td>
-        <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
-        <td><%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'See Details', snippet %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,10 +43,3 @@
       </div>
     </div>
   </div>
-
-
-
-
-<br>
-
-<%= link_to 'New Snippet', new_snippet_path %>

@@ -15609,3 +15609,1108 @@ Processing by SnippetsController#index as HTML
 Completed 200 OK in 74ms (Views: 72.0ms | ActiveRecord: 0.8ms | Allocations: 7685)
 
 
+Started GET "/snippets" for ::1 at 2020-12-22 20:02:38 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.4ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 753)
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3637)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 72.1ms | ActiveRecord: 0.6ms | Allocations: 9680)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-22 20:02:47 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (0.5ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.5ms | Allocations: 1253)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/snippets" for ::1 at 2020-12-22 20:02:49 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.0ms | Allocations: 822)
+  Rendered layouts/_signin.html.erb (Duration: 5.0ms | Allocations: 643)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 2687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 101.9ms | ActiveRecord: 0.8ms | Allocations: 7700)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:03:15 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 2.9ms | Allocations: 753)
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.5ms | Allocations: 9494)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:03:18 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 12.6ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 5.1ms | Allocations: 643)
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 30.3ms | Allocations: 2528)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.7ms | Allocations: 7521)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:03:41 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 8.5ms | Allocations: 2554)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 71.0ms | ActiveRecord: 0.4ms | Allocations: 8121)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:04:41 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 8.6ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.2ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 28.8ms | Allocations: 3442)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 91.9ms | ActiveRecord: 0.8ms | Allocations: 9479)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:04:43 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 8.6ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 3.6ms | Allocations: 643)
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 25.3ms | Allocations: 2551)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 47.0ms | Allocations: 5620)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.7ms | Allocations: 6237)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"snippets", :id=>nil}, missing required keys: [:id]):
+    12:         <div class="ui fluid raised card">
+    13:           <div class="content">
+    14:           <%= render 'form', snippet: @snippet %>
+    15:           <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+    16:             <%= link_to 'Back', snippets_path %>
+    17:           </div>
+    18:         </div>
+  
+app/views/snippets/new.html.erb:15
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:04:52 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.4ms | Allocations: 643)
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 7.1ms | Allocations: 2134)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 4842)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms | Allocations: 5324)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"snippets", :id=>nil}, missing required keys: [:id]):
+    12:         <div class="ui fluid raised card">
+    13:           <div class="content">
+    14:           <%= render 'form', snippet: @snippet %>
+    15:           <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+    16:             <%= link_to 'Back', snippets_path %>
+    17:           </div>
+    18:         </div>
+  
+app/views/snippets/new.html.erb:15
+Started GET "/snippets" for ::1 at 2020-12-22 20:05:01 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.5ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.3ms | Allocations: 643)
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 2523)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.5ms | Allocations: 7527)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:05:04 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.2ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 2.0ms | Allocations: 643)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 7.8ms | Allocations: 2135)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 4841)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms | Allocations: 5304)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"snippets", :id=>nil}, missing required keys: [:id]):
+    12:         <div class="ui fluid raised card">
+    13:           <div class="content">
+    14:           <%= render 'form', snippet: @snippet %>
+    15:           <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+    16:             <%= link_to 'Back', snippets_path %>
+    17:           </div>
+    18:         </div>
+  
+app/views/snippets/new.html.erb:15
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:05:24 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 8.6ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 6.2ms | Allocations: 753)
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 22.3ms | Allocations: 2551)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 52.9ms | Allocations: 5216)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 124.2ms | ActiveRecord: 0.8ms | Allocations: 11219)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:05:48 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.1ms | Allocations: 643)
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.6ms | Allocations: 7995)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-22 20:05:49 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (0.4ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1235)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/snippets" for ::1 at 2020-12-22 20:05:51 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.6ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.1ms | Allocations: 643)
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2520)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.6ms | Allocations: 7513)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:08:38 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 8.0ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 6.1ms | Allocations: 753)
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 3398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 98.0ms | ActiveRecord: 0.7ms | Allocations: 9439)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:08:46 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.6ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.4ms | Allocations: 643)
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 2505)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.6ms | Allocations: 7499)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:08:47 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.8ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 6.1ms | Allocations: 643)
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 23.4ms | Allocations: 2552)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 61.6ms | Allocations: 4634)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 117.2ms | ActiveRecord: 1.1ms | Allocations: 9745)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:09:26 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.5ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 2.6ms | Allocations: 753)
+  Rendered snippets/_form.html.erb (Duration: 970.6ms | Allocations: 219699)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 986.4ms | Allocations: 222319)
+Completed 500 Internal Server Error in 1000ms (ActiveRecord: 0.0ms | Allocations: 223648)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x000000000a2f77b8>):
+    13: 
+    14:   <div class="field">
+    15:     <%= form.label :trigger %>
+    16:     <%= form.input :trigger %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/snippets/_form.html.erb:16
+app/views/snippets/_form.html.erb:1
+app/views/snippets/new.html.erb:14
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:10:22 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.4ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 3.0ms | Allocations: 753)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 11.7ms | Allocations: 2569)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 31.3ms | Allocations: 5233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 94.3ms | ActiveRecord: 0.6ms | Allocations: 11262)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:10:35 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.0ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 753)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 8.9ms | Allocations: 2569)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 5229)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 78.1ms | ActiveRecord: 0.6ms | Allocations: 11242)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:11:12 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.4ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 2.9ms | Allocations: 754)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 128.7ms | Allocations: 6548)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 145.9ms | Allocations: 9209)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 203ms (Views: 199.3ms | ActiveRecord: 0.6ms | Allocations: 15107)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:11:40 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.8ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 753)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 20.6ms | Allocations: 2583)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 40.0ms | Allocations: 5243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 93.3ms | ActiveRecord: 0.5ms | Allocations: 11250)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:12:11 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.0ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 5.0ms | Allocations: 643)
+  [1m[36mSnippet Load (1.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 2811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 163ms (Views: 157.4ms | ActiveRecord: 1.2ms | Allocations: 7941)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:12:15 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 2.3ms | Allocations: 643)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 8.2ms | Allocations: 2161)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 3892)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.5ms | Allocations: 8861)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:12:16 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.5ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 2.1ms | Allocations: 643)
+  [1m[36mSnippet Load (0.5ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2498)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.5ms | Allocations: 7490)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:12:18 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.4ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 5.1ms | Allocations: 643)
+  [1m[36mTag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 19.0ms | Allocations: 2158)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 38.8ms | Allocations: 3889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 118.7ms | ActiveRecord: 1.5ms | Allocations: 8861)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-22 20:12:58 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (0.6ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms | Allocations: 1245)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:13:00 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.1ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.6ms | Allocations: 643)
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 8.9ms | Allocations: 2158)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 3890)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.8ms | Allocations: 8870)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:13:02 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.8ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 2.8ms | Allocations: 643)
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 12.0ms | Allocations: 2158)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 3889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.8ms | Allocations: 8867)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:13:04 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 2.4ms | Allocations: 643)
+  [1m[36mTag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 7.7ms | Allocations: 2158)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 1.1ms | Allocations: 8869)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:13:05 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.8ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 2.3ms | Allocations: 643)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2498)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.8ms | Allocations: 7490)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:13:07 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.3ms | Allocations: 820)
+  Rendered layouts/_signin.html.erb (Duration: 4.5ms | Allocations: 643)
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 10.3ms | Allocations: 2158)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 23.8ms | Allocations: 3889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.7ms | Allocations: 8867)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:13:23 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 10.3ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 8.2ms | Allocations: 753)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 10.4ms | Allocations: 2579)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 51.0ms | Allocations: 5205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 116.9ms | ActiveRecord: 0.6ms | Allocations: 11222)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:15:00 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 1.1ms | Allocations: 1342)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1755)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 3061)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check   <div class='ui raised card'>
+    <div class='content'>
+      <div class='header'><%link_to"<%= image_tag("semplificatologo.png", style: 'height:auto;width:80%;margin-bottom:4%') %>","/"</div>
+                <div class='ui horizontal divider'></div>
+        <%=link_to "Your Snippets", "/snippets_lists/main"%>
+        <br>
+        <div class='ui horizontal divider'></div>
+        <%=link_to "Explore Snippets", "/snippets"%>
+        <br>
+        <div class='ui horizontal divider'></div>
+               <em><%=link_to "Add a snippet", "/snippets/new"%></em>
+        <br>
+        <div class='ui horizontal divider'></div>
+    </div>
+
+):
+1:      <div class='ui raised card'>
+2:        <div class='content'>
+3:          <div class='header'><%link_to"<%= image_tag("semplificatologo.png", style: 'height:auto;width:80%;margin-bottom:4%') %>","/"</div>
+4:                    <div class='ui horizontal divider'></div>
+5:            <%=link_to "Your Snippets", "/snippets_lists/main"%>
+6:            <br>
+7:            <div class='ui horizontal divider'></div>
+8:            <%=link_to "Explore Snippets", "/snippets"%>
+9:            <br>
+10:            <div class='ui horizontal divider'></div>
+11:                   <em><%=link_to "Add a snippet", "/snippets/new"%></em>
+12:            <br>
+13:            <div class='ui horizontal divider'></div>
+14:        </div>
+  
+app/views/layouts/_sidenav.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/_sidenav.html.erb:4: unknown regexp options - dv
+app/views/layouts/_sidenav.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_sidenav.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/_sidenav.html.erb:4: unknown regexp options - dv
+app/views/layouts/_sidenav.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_sidenav.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/_sidenav.html.erb:4: unknown regexp options - dv
+app/views/layouts/_sidenav.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_sidenav.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/_sidenav.html.erb:4: unknown regexp options - dv
+app/views/layouts/_sidenav.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_sidenav.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/_sidenav.html.erb:4: unknown regexp options - dv
+app/views/layouts/_sidenav.html.erb:7: syntax error, unexpected '<'
+app/views/layouts/_sidenav.html.erb:3: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/layouts/_sidenav.html.erb:4: unknown regexp options - dv
+app/views/layouts/_sidenav.html.erb:7: syntax error, unexpected '<'
+app/views/snippets/new.html.erb:5
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:15:14 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 3.3ms | Allocations: 1016)
+  Rendered layouts/_signin.html.erb (Duration: 10.0ms | Allocations: 886)
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 14.3ms | Allocations: 2570)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 45.9ms | Allocations: 5321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 114.2ms | ActiveRecord: 0.9ms | Allocations: 11334)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:15:27 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.3ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.7ms | Allocations: 753)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 8.0ms | Allocations: 2579)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 5197)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 75.5ms | ActiveRecord: 0.5ms | Allocations: 11214)
+
+
+Started GET "/snippets/new" for ::1 at 2020-12-22 20:16:14 -0800
+Processing by SnippetsController#new as HTML
+  Rendering snippets/new.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.4ms | Allocations: 1021)
+  Rendered layouts/_signin.html.erb (Duration: 4.8ms | Allocations: 753)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  ↳ app/views/snippets/_form.html.erb:36
+  Rendered snippets/_form.html.erb (Duration: 10.2ms | Allocations: 2579)
+  Rendered snippets/new.html.erb within layouts/application (Duration: 33.0ms | Allocations: 5199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 93.2ms | ActiveRecord: 0.5ms | Allocations: 11210)
+
+
+Started GET "/" for ::1 at 2020-12-22 20:16:20 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 10.3ms | Allocations: 713)
+  Rendered layouts/_signin.html.erb (Duration: 3.0ms | Allocations: 643)
+  Rendered home/index.html.erb within layouts/application (Duration: 76.0ms | Allocations: 6921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 136ms (Views: 132.6ms | ActiveRecord: 0.0ms | Allocations: 10618)
+
+
+Started GET "/snippets_lists/main" for ::1 at 2020-12-22 20:20:06 -0800
+Processing by SnippetsListsController#show as HTML
+  Parameters: {"id"=>"main"}
+  [1m[36mSnippetsList Load (0.8ms)[0m  [1m[34mSELECT "snippets_lists".* FROM "snippets_lists" WHERE "snippets_lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms | Allocations: 1241)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SnippetsList with 'id'=main):
+  
+app/controllers/snippets_lists_controller.rb:67:in `set_snippets_list'
+Started GET "/" for ::1 at 2020-12-22 20:20:08 -0800
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_sidenav.html.erb (Duration: 3.7ms | Allocations: 911)
+  Rendered layouts/_signin.html.erb (Duration: 2.9ms | Allocations: 753)
+  Rendered home/index.html.erb within layouts/application (Duration: 72.0ms | Allocations: 7563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 118.5ms | ActiveRecord: 0.0ms | Allocations: 11610)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:20:10 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.7ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 2.8ms | Allocations: 643)
+  [1m[36mSnippet Load (2.0ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 2812)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 76.7ms | ActiveRecord: 2.0ms | Allocations: 8491)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:20:50 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.6ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 2.6ms | Allocations: 753)
+  [1m[36mSnippet Load (0.6ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 3407)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 88.7ms | ActiveRecord: 0.6ms | Allocations: 9442)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:25:46 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered snippets/index.html.erb within layouts/application (Duration: 35.3ms | Allocations: 7409)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 9571)
+
+
+  
+ActionView::Template::Error (The asset "copyId.js" is not present in the asset pipeline.
+):
+    1: <%= javascript_include_tag "copyId.js" %>
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: 
+  
+app/views/snippets/index.html.erb:1
+Started GET "/snippets" for ::1 at 2020-12-22 20:25:54 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered snippets/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 7125)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 7621)
+
+
+  
+ActionView::Template::Error (The asset "copyId.js" is not present in the asset pipeline.
+):
+    1: <%= javascript_include_tag "copyId.js" %>
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: 
+  
+app/views/snippets/index.html.erb:1
+Started GET "/snippets" for ::1 at 2020-12-22 20:26:16 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 10.5ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 6.8ms | Allocations: 753)
+  [1m[36mSnippet Load (0.7ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 80.2ms | Allocations: 12635)
+[Webpacker] Compiling...
+Started GET "/snippets" for ::1 at 2020-12-22 20:26:19 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 4.3ms | Allocations: 821)
+  Rendered layouts/_signin.html.erb (Duration: 3.1ms | Allocations: 643)
+  [1m[36mSnippet Load (5.1ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 2609)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: d295df77d67ce8889165
+Version: webpack 4.44.2
+Time: 7780ms
+Built at: 12/22/2020 8:26:31 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b79338a7798a9b13703e.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-b79338a7798a9b13703e.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b79338a7798a9b13703e.js js/application-b79338a7798a9b13703e.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+Completed 500 Internal Server Error in 15955ms (ActiveRecord: 9.7ms | Allocations: 41262)
+
+
+  
+ActionView::Template::Error (The asset "copyId.js" is not present in the asset pipeline.
+):
+    10:       crossorigin="anonymous"></script>
+    11: <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <%= javascript_include_tag "copyId.js" %>
+    14:   </head>
+    15:   <body>
+    16:  <%= yield %> 
+  
+app/views/layouts/application.html.erb:13
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: d295df77d67ce8889165
+Version: webpack 4.44.2
+Time: 6542ms
+Built at: 12/22/2020 8:26:35 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b79338a7798a9b13703e.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-b79338a7798a9b13703e.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b79338a7798a9b13703e.js js/application-b79338a7798a9b13703e.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+Completed 500 Internal Server Error in 16776ms (ActiveRecord: 5.1ms | Allocations: 430193)
+
+
+  
+ActionView::Template::Error (The asset "copyId.js" is not present in the asset pipeline.
+):
+    10:       crossorigin="anonymous"></script>
+    11: <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    13:     <%= javascript_include_tag "copyId.js" %>
+    14:   </head>
+    15:   <body>
+    16:  <%= yield %> 
+  
+app/views/layouts/application.html.erb:13
+Started GET "/snippets" for ::1 at 2020-12-22 20:27:28 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.3ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 59.3ms | Allocations: 753)
+  [1m[36mSnippet Load (1.3ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 173.9ms | Allocations: 12653)
+[Webpacker] Compiling...
+Started GET "/snippets" for ::1 at 2020-12-22 20:27:34 -0800
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: 47047be88b562517f149
+Version: webpack 4.44.2
+Time: 3122ms
+Built at: 12/22/2020 8:27:37 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-995a6099f371e7f47d03.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-995a6099f371e7f47d03.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-995a6099f371e7f47d03.js js/application-995a6099f371e7f47d03.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 1.12 KiB {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+Completed 200 OK in 8114ms (Views: 8067.9ms | ActiveRecord: 37.2ms | Allocations: 22984)
+
+
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 5.2ms | Allocations: 822)
+  Rendered layouts/_signin.html.erb (Duration: 5.1ms | Allocations: 643)
+  [1m[36mSnippet Load (1.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 158.7ms | Allocations: 11704)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 244ms (Views: 229.4ms | ActiveRecord: 10.4ms | Allocations: 17593)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:29:03 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: d295df77d67ce8889165
+Version: webpack 4.44.2
+Time: 3798ms
+Built at: 12/22/2020 8:29:12 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b79338a7798a9b13703e.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-b79338a7798a9b13703e.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b79338a7798a9b13703e.js js/application-b79338a7798a9b13703e.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+  Rendered snippets/index.html.erb within layouts/application (Duration: 9215.2ms | Allocations: 6821)
+Completed 500 Internal Server Error in 9277ms (ActiveRecord: 0.0ms | Allocations: 8993)
+
+
+  
+ActionView::Template::Error (Webpacker can't find copyId in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-b79338a7798a9b13703e.js",
+  "application.js.map": "/packs/js/application-b79338a7798a9b13703e.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-b79338a7798a9b13703e.js"
+      ],
+      "js.map": [
+        "/packs/js/application-b79338a7798a9b13703e.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs/js/server_rendering-457937d1d2d2bb7d383c.js"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-457937d1d2d2bb7d383c.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-87f42d45ac91793da730.js",
+  "hello_react.js.map": "/packs/js/hello_react-87f42d45ac91793da730.js.map",
+  "server_rendering.js": "/packs/js/server_rendering-457937d1d2d2bb7d383c.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-457937d1d2d2bb7d383c.js.map"
+}
+):
+    1: <%= javascript_pack_tag 'copyId' %>
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: 
+  
+app/views/snippets/index.html.erb:1
+Started GET "/snippets" for ::1 at 2020-12-22 20:31:31 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: d295df77d67ce8889165
+Version: webpack 4.44.2
+Time: 3546ms
+Built at: 12/22/2020 8:31:41 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-b79338a7798a9b13703e.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-b79338a7798a9b13703e.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-b79338a7798a9b13703e.js js/application-b79338a7798a9b13703e.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 968 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+  Rendered snippets/index.html.erb within layouts/application (Duration: 10858.4ms | Allocations: 5646)
+Completed 500 Internal Server Error in 10886ms (ActiveRecord: 0.0ms | Allocations: 7132)
+
+
+  
+ActionView::Template::Error (Webpacker can't find copyId in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-b79338a7798a9b13703e.js",
+  "application.js.map": "/packs/js/application-b79338a7798a9b13703e.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-b79338a7798a9b13703e.js"
+      ],
+      "js.map": [
+        "/packs/js/application-b79338a7798a9b13703e.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs/js/server_rendering-457937d1d2d2bb7d383c.js"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-457937d1d2d2bb7d383c.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-87f42d45ac91793da730.js",
+  "hello_react.js.map": "/packs/js/hello_react-87f42d45ac91793da730.js.map",
+  "server_rendering.js": "/packs/js/server_rendering-457937d1d2d2bb7d383c.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-457937d1d2d2bb7d383c.js.map"
+}
+):
+    1: <%= javascript_pack_tag 'copyId' %>
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: 
+  
+app/views/snippets/index.html.erb:1
+Started GET "/snippets" for ::1 at 2020-12-22 20:32:41 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/alexa/Documents/rails-app/public/packs
+[Webpacker] Hash: 47047be88b562517f149
+Version: webpack 4.44.2
+Time: 2991ms
+Built at: 12/22/2020 8:32:49 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-995a6099f371e7f47d03.js  1.39 MiB       application  [emitted] [immutable]  application
+     js/application-995a6099f371e7f47d03.js.map  1.59 MiB       application  [emitted] [dev]        application
+         js/hello_react-87f42d45ac91793da730.js   1.1 MiB       hello_react  [emitted] [immutable]  hello_react
+     js/hello_react-87f42d45ac91793da730.js.map  1.27 MiB       hello_react  [emitted] [dev]        hello_react
+    js/server_rendering-457937d1d2d2bb7d383c.js  1.27 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-457937d1d2d2bb7d383c.js.map  1.46 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.05 KiB                    [emitted]              
+Entrypoint application = js/application-995a6099f371e7f47d03.js js/application-995a6099f371e7f47d03.js.map
+Entrypoint hello_react = js/hello_react-87f42d45ac91793da730.js js/hello_react-87f42d45ac91793da730.js.map
+Entrypoint server_rendering = js/server_rendering-457937d1d2d2bb7d383c.js js/server_rendering-457937d1d2d2bb7d383c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 222 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 1.12 KiB {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.07 KiB {hello_react} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 32 hidden modules
+
+  Rendered snippets/index.html.erb within layouts/application (Duration: 7547.9ms | Allocations: 5641)
+Completed 500 Internal Server Error in 7567ms (ActiveRecord: 0.0ms | Allocations: 7129)
+
+
+  
+ActionView::Template::Error (Webpacker can't find copyId in C:/Users/alexa/Documents/rails-app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-995a6099f371e7f47d03.js",
+  "application.js.map": "/packs/js/application-995a6099f371e7f47d03.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-995a6099f371e7f47d03.js"
+      ],
+      "js.map": [
+        "/packs/js/application-995a6099f371e7f47d03.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-87f42d45ac91793da730.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs/js/server_rendering-457937d1d2d2bb7d383c.js"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-457937d1d2d2bb7d383c.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-87f42d45ac91793da730.js",
+  "hello_react.js.map": "/packs/js/hello_react-87f42d45ac91793da730.js.map",
+  "server_rendering.js": "/packs/js/server_rendering-457937d1d2d2bb7d383c.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-457937d1d2d2bb7d383c.js.map"
+}
+):
+    1: <%= javascript_pack_tag 'copyId' %>
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: 
+  
+app/views/snippets/index.html.erb:1
+Started GET "/snippets" for ::1 at 2020-12-22 20:33:02 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.4ms | Allocations: 1020)
+  Rendered layouts/_signin.html.erb (Duration: 5.2ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 413.5ms | Allocations: 12670)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 630ms (Views: 601.6ms | ActiveRecord: 24.5ms | Allocations: 18612)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:34:56 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 7.6ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.4ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 47.1ms | Allocations: 3416)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 112.1ms | ActiveRecord: 0.8ms | Allocations: 9459)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:35:28 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 11.9ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 9.3ms | Allocations: 753)
+  [1m[36mSnippet Load (1.2ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 67.7ms | Allocations: 3415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 183ms (Views: 175.5ms | ActiveRecord: 1.2ms | Allocations: 9444)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:37:13 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.2ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 3.7ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 251.5ms | Allocations: 3398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 464ms (Views: 459.8ms | ActiveRecord: 0.8ms | Allocations: 9441)
+
+
+Started GET "/snippets" for ::1 at 2020-12-22 20:38:37 -0800
+Processing by SnippetsController#index as HTML
+  Rendering snippets/index.html.erb within layouts/application
+  Rendered layouts/_sidenav.html.erb (Duration: 6.0ms | Allocations: 1019)
+  Rendered layouts/_signin.html.erb (Duration: 4.4ms | Allocations: 753)
+  [1m[36mSnippet Load (0.8ms)[0m  [1m[34mSELECT "snippets".* FROM "snippets" WHERE (is_public = true)[0m
+  ↳ app/views/snippets/index.html.erb:30
+  Rendered snippets/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 3405)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 118.7ms | ActiveRecord: 0.8ms | Allocations: 9445)
+
+

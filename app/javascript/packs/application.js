@@ -19,3 +19,10 @@ require("channels")
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
+
+function idToClipboard(arg) {
+  let snippetID = document.getElementById(arg);
+  snippetID.select();
+  document.execCommand("copy");
+  console.log("Copied" + snippetID.value);
+}
